@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-AHF Remote/Pods-AHF Remote-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework
+${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework
+${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework
+${BUILT_PRODUCTS_DIR}/KDCircularProgress/KDCircularProgress.framework
+${BUILT_PRODUCTS_DIR}/Malert/Malert.framework

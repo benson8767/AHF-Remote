@@ -1,0 +1,46 @@
+/* 
+  Localizable.strings
+  AHF Remote
+
+  Created by benson chan on 2021/11/11.
+  
+*/
+//======= setting ========
+"Settings" = "Settings";
+"APPLICATION" = "APPLICATION";
+"System Haptics" = "System Haptics";
+"Play haptics for bed control" = "Play haptics for bed control";
+"SECURITY" = "SECURITY";
+"Automatic Lock After" = "Automatic Lock After";
+"Automatic Lock After1" = "Automatic Lock After";
+"Unlock After Pressing" = "Unlock After Pressing";
+"Unlock After Pressing1" = "Unlock After Pressing";
+"ABOUT" = "ABOUT";
+"Version" = "Version";
+//======= dialog ========
+"\"AHF Remote\"\nWould Need You to Allow Bluetooth Access" = "\"AHF\U00A0Remote\"\nWould Need You to Allow Bluetooth Access";
+"To control the bed." = "To control the bed.";
+"CLOSE" = "CLOSE";
+"SETTINGS" = "SETTINGS";
+"Disconnect from" = "Disconnect from";
+"Will need to manually connect\nagain." = "Will need to manually connect\nagain.";
+"CANCEL" = "CANCEL";
+"DISCONNECT" = "DISCONNECT";
+"Bluetooth Connection\nLost" = "Bluetooth Connection\nLost";
+"Please make sure the Bluetooth\ndevice by the bed is turned on and\nin range." = "Please make sure the Bluetooth\ndevice by the bed is turned on and\nin range.";
+"TRY LATER" = "TRY LATER";
+"RE-CONNECT" = "RE-CONNECT";
+"Connecting" = "Connecting";
+"Re-Connecting to" = "Re-Connecting to";
+"Press buttons 1 and 3 on handset for" = "Press buttons 1 and 3 on handset for";
+"3s" = "3s";
+"to broadcast" = "to broadcast";
+"signal." = "signal.";
+//======= unlock ========
+"Press and hold\nLOCK KEY\nto unlock." = "Press and hold\nLOCK KEY\nto unlock.";
+"Move your mobile close to TRF2 (a Bluetooth device by the bed)." = "Move your mobile close to TRF2 (a Bluetooth device by the bed).";
+//======= Toast =========
+"Device bluetooth is \nturned off." = "Device bluetooth is \nturned off.";
+"Connection failed." = "Connection failed.";
+"not in range." =  "not in range.";
+"connected." = "connected.";

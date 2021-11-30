@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "1s"; ObjectID = "6le-1W-6yE"; */
+"6le-1W-6yE.text" = "1s";
+
+/* Class = "UILabel"; text = "10s"; ObjectID = "71Q-Bk-bXt"; */
+"71Q-Bk-bXt.text" = "10s";
+
+/* Class = "UILabel"; text = "Press and hold\nLOCK KEY\nto unlock."; ObjectID = "8yu-LT-NpD"; */
+"8yu-LT-NpD.text" = "Press and hold\nLOCK KEY\nto unlock.";
+
+/* Class = "UILabel"; text = "Automatic Lock After"; ObjectID = "JPN-Aq-ckV"; */
+"JPN-Aq-ckV.text" = "Automatic Lock After";
+
+/* Class = "UILabel"; text = "Version"; ObjectID = "LHd-BT-dDI"; */
+"LHd-BT-dDI.text" = "Version";
+
+/* Class = "UILabel"; text = "Play haptics for bed control"; ObjectID = "SQL-On-J9z"; */
+"SQL-On-J9z.text" = "Play haptics for bed control";
+
+/* Class = "UILabel"; text = "APPLICATION"; ObjectID = "WP5-Bu-FxY"; */
+"WP5-Bu-FxY.text" = "APPLICATION";
+
+/* Class = "UILabel"; text = "ABOUT"; ObjectID = "Xjq-ye-gYm"; */
+"Xjq-ye-gYm.text" = "ABOUT";
+
+/* Class = "UILabel"; text = "Unlock After Pressing"; ObjectID = "dBx-Mz-cN9"; */
+"dBx-Mz-cN9.text" = "Unlock After Pressing";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "hsf-mf-arI"; */
+"hsf-mf-arI.text" = "Settings";
+
+/* Class = "UILabel"; text = "1.0.5"; ObjectID = "sPT-sW-Whb"; */
+"sPT-sW-Whb.text" = "1.0.5";
+
+/* Class = "UILabel"; text = "SECURITY"; ObjectID = "sgY-2e-KKz"; */
+"sgY-2e-KKz.text" = "SECURITY";
+
+/* Class = "UILabel"; text = "System Haptics"; ObjectID = "yNv-Pc-m7t"; */
+"yNv-Pc-m7t.text" = "System Haptics";

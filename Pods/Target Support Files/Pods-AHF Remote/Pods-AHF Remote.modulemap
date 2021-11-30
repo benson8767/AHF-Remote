@@ -1,0 +1,6 @@
+framework module Pods_AHF_Remote {
+  umbrella header "Pods-AHF Remote-umbrella.h"
+
+  export *
+  module * { export * }
+}

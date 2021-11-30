@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="NFz-P0-PiL" customClass="ManualDisconnectDialogView" customModule="AHF_Remote" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="346" height="260"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Disconnect from" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEw-d5-RRy">
+                    <rect key="frame" x="0.0" y="55" width="346" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="eEw-d5-RRy" secondAttribute="height" multiplier="346:29" id="nhs-Wo-ld9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                    <color key="textColor" red="0.1764705882352941" green="0.16470588235294117" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="AHF_xxxx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hiz-am-ohI">
+                    <rect key="frame" x="0.0" y="84" width="346" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="hiz-am-ohI" secondAttribute="height" multiplier="346:29" id="VYR-m0-B31"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                    <color key="textColor" red="0.14117647058823529" green="0.59607843137254901" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lp9-vM-uU5">
+                    <rect key="frame" x="0.0" y="203.5" width="346" height="1"/>
+                    <color key="backgroundColor" red="0.1764705882352941" green="0.16470588235294117" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Lp9-vM-uU5" secondAttribute="height" multiplier="375:1" id="iRV-M4-gdI"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dig-jx-bVp">
+                    <rect key="frame" x="0.0" y="204.5" width="172.5" height="55.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Dig-jx-bVp" secondAttribute="height" multiplier="187:60" id="7tg-xl-XvW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="CANCEL">
+                        <color key="titleColor" red="0.14117647058823529" green="0.59607843137254901" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelAction:" destination="NFz-P0-PiL" eventType="touchUpInside" id="NoJ-AN-EvD"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yoj-LY-m30">
+                    <rect key="frame" x="172.5" y="204.5" width="1" height="60"/>
+                    <color key="backgroundColor" red="0.1764705882352941" green="0.16470588235294117" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="CGg-aj-7PS"/>
+                        <constraint firstAttribute="width" secondItem="Yoj-LY-m30" secondAttribute="height" multiplier="1:60" id="kDl-BQ-mAa"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Jt-Qm-AMs">
+                    <rect key="frame" x="173.5" y="204.5" width="172.5" height="55.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="4Jt-Qm-AMs" secondAttribute="height" multiplier="187:60" id="vUT-nu-Z9W"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <state key="normal" title="DISCONNECT">
+                        <color key="titleColor" red="0.14117647058823529" green="0.59607843137254901" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="disconnectAction:" destination="NFz-P0-PiL" eventType="touchUpInside" id="pyU-06-Dr6"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will need to manually connect again.                           " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oAn-hL-VgR">
+                    <rect key="frame" x="52.5" y="133" width="241" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="oAn-hL-VgR" secondAttribute="height" multiplier="241:41" id="F1h-Pb-BwV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.61568627450980395" green="0.58431372549019611" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="zgv-le-djc"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="4Jt-Qm-AMs" firstAttribute="top" secondItem="Lp9-vM-uU5" secondAttribute="bottom" id="8G8-W7-gdh"/>
+                <constraint firstItem="Yoj-LY-m30" firstAttribute="leading" secondItem="Dig-jx-bVp" secondAttribute="trailing" id="ADN-7b-pBc"/>
+                <constraint firstItem="4Jt-Qm-AMs" firstAttribute="bottom" secondItem="zgv-le-djc" secondAttribute="bottom" id="Bid-EZ-AFx"/>
+                <constraint firstItem="Dig-jx-bVp" firstAttribute="bottom" secondItem="zgv-le-djc" secondAttribute="bottom" id="CgT-Y6-wUt"/>
+                <constraint firstItem="Lp9-vM-uU5" firstAttribute="top" secondItem="oAn-hL-VgR" secondAttribute="bottom" constant="29.5" id="HlA-Um-AwJ"/>
+                <constraint firstItem="4Jt-Qm-AMs" firstAttribute="leading" secondItem="Yoj-LY-m30" secondAttribute="trailing" id="J1L-zR-FMp"/>
+                <constraint firstItem="Dig-jx-bVp" firstAttribute="top" secondItem="Lp9-vM-uU5" secondAttribute="bottom" id="Xs4-Kf-8bm"/>
+                <constraint firstItem="Dig-jx-bVp" firstAttribute="leading" secondItem="zgv-le-djc" secondAttribute="leading" id="YVq-fb-Wdu"/>
+                <constraint firstItem="Lp9-vM-uU5" firstAttribute="leading" secondItem="NFz-P0-PiL" secondAttribute="leading" id="d37-Ev-9KA"/>
+                <constraint firstItem="oAn-hL-VgR" firstAttribute="centerX" secondItem="NFz-P0-PiL" secondAttribute="centerX" id="fr1-mT-X6M"/>
+                <constraint firstItem="eEw-d5-RRy" firstAttribute="centerX" secondItem="NFz-P0-PiL" secondAttribute="centerX" id="gjS-j8-Z6F"/>
+                <constraint firstItem="eEw-d5-RRy" firstAttribute="top" secondItem="zgv-le-djc" secondAttribute="top" constant="40" id="i0x-1T-FS2"/>
+                <constraint firstItem="hiz-am-ohI" firstAttribute="centerX" secondItem="NFz-P0-PiL" secondAttribute="centerX" id="owx-DO-XO3"/>
+                <constraint firstItem="4Jt-Qm-AMs" firstAttribute="trailing" secondItem="zgv-le-djc" secondAttribute="trailing" id="qaB-1C-un0"/>
+                <constraint firstItem="Yoj-LY-m30" firstAttribute="top" secondItem="Lp9-vM-uU5" secondAttribute="bottom" id="rP7-6x-Er7"/>
+                <constraint firstItem="oAn-hL-VgR" firstAttribute="top" secondItem="hiz-am-ohI" secondAttribute="bottom" constant="20" id="sqW-s6-IBM"/>
+                <constraint firstItem="hiz-am-ohI" firstAttribute="top" secondItem="eEw-d5-RRy" secondAttribute="bottom" id="vNi-Mg-ad3"/>
+                <constraint firstAttribute="trailing" secondItem="Lp9-vM-uU5" secondAttribute="trailing" id="wgN-2Y-iJV"/>
+                <constraint firstItem="Dig-jx-bVp" firstAttribute="top" secondItem="Lp9-vM-uU5" secondAttribute="bottom" id="ydH-Q6-HW1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelBtn" destination="Dig-jx-bVp" id="iJd-zk-iBc"/>
+                <outlet property="descriptionLabel" destination="oAn-hL-VgR" id="VXi-uj-E4A"/>
+                <outlet property="devName" destination="hiz-am-ohI" id="J65-7j-aB3"/>
+                <outlet property="disconnectBtn" destination="4Jt-Qm-AMs" id="rjQ-PJ-yPX"/>
+                <outlet property="disconnect_from" destination="eEw-d5-RRy" id="xmp-Y9-eab"/>
+            </connections>
+            <point key="canvasLocation" x="-1301.449275362319" y="107.8125"/>
+        </view>
+    </objects>
+</document>

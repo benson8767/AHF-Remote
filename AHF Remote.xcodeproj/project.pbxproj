@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F8EDFFB2738D78D0023BFCD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EDFFA2738D78D0023BFCD /* SettingsViewController.swift */; };
+		5F8EDFFD2738D7B40023BFCD /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EDFFC2738D7B40023BFCD /* SettingsModel.swift */; };
+		5F8EDFFF2738D7D20023BFCD /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EDFFE2738D7D20023BFCD /* SettingsViewModel.swift */; };
+		5F8EE005273A596E0023BFCD /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EE004273A596E0023BFCD /* LockViewController.swift */; };
+		5F907EA6273CA8FD000650DD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F907EA8273CA8FD000650DD /* Localizable.strings */; };
+		5F907EB0273E3B36000650DD /* MainSe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F907EAE273E3B36000650DD /* MainSe.storyboard */; };
+		5F907EB2273E3F25000650DD /* BootLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F907EB1273E3F25000650DD /* BootLoaderViewController.swift */; };
+		5F907EB72741F2E6000650DD /* ConnectingDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F907EB62741F2E6000650DD /* ConnectingDialog.swift */; };
+		5F907EBA2741F512000650DD /* ReConnecting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F907EB82741F512000650DD /* ReConnecting.xib */; };
+		5F907EBB2741F512000650DD /* ReConnectingDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F907EB92741F512000650DD /* ReConnectingDialog.swift */; };
+		5F907EBE27420951000650DD /* Disconnect.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F907EBC27420951000650DD /* Disconnect.xib */; };
+		5F907EBF27420951000650DD /* DisconnectDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F907EBD27420951000650DD /* DisconnectDialog.swift */; };
+		5F907EC627421990000650DD /* ManualDisconnectDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F907EC427421990000650DD /* ManualDisconnectDialog.swift */; };
+		5F907EC727421990000650DD /* ManualDisconnect.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F907EC527421990000650DD /* ManualDisconnect.xib */; };
+		5F907ECA27423DF0000650DD /* AllowBTAccessDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F907EC827423DF0000650DD /* AllowBTAccessDialog.swift */; };
+		5F907ECB27423DF0000650DD /* AllowBTAccess.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F907EC927423DF0000650DD /* AllowBTAccess.xib */; };
+		5F907ED327473EA1000650DD /* ReConnecting_fr.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F907ED227473EA1000650DD /* ReConnecting_fr.xib */; };
+		5F907ED727473FDA000650DD /* Connecting_fr.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F907ED627473FDA000650DD /* Connecting_fr.xib */; };
+		5F907ED9274740AA000650DD /* Connecting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F907ED8274740AA000650DD /* Connecting.xib */; };
+		5FD57A0B2727DDF6003B4BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A0A2727DDF6003B4BE0 /* AppDelegate.swift */; };
+		5FD57A0D2727DDF6003B4BE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A0C2727DDF6003B4BE0 /* SceneDelegate.swift */; };
+		5FD57A0F2727DDF6003B4BE0 /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A0E2727DDF6003B4BE0 /* ControlViewController.swift */; };
+		5FD57A122727DDF6003B4BE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD57A102727DDF6003B4BE0 /* Main.storyboard */; };
+		5FD57A142727DDF7003B4BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FD57A132727DDF7003B4BE0 /* Assets.xcassets */; };
+		5FD57A172727DDF7003B4BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD57A152727DDF7003B4BE0 /* LaunchScreen.storyboard */; };
+		5FD57A20272A293A003B4BE0 /* BleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A1F272A293A003B4BE0 /* BleController.swift */; };
+		5FD57A22272A2981003B4BE0 /* ControlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A21272A2981003B4BE0 /* ControlModel.swift */; };
+		5FD57A24272A2994003B4BE0 /* ControlViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A23272A2994003B4BE0 /* ControlViewModel.swift */; };
+		5FD57A28272A2A4F003B4BE0 /* SaveTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A26272A2A4F003B4BE0 /* SaveTool.swift */; };
+		5FD57A29272A2A4F003B4BE0 /* KeyAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A27272A2A4F003B4BE0 /* KeyAction.swift */; };
+		5FD57A3F272A2A65003B4BE0 /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A2C272A2A65003B4BE0 /* InteractiveTransition.swift */; };
+		5FD57A40272A2A65003B4BE0 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A2D272A2A65003B4BE0 /* PresentationController.swift */; };
+		5FD57A41272A2A65003B4BE0 /* UIImageView+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A2E272A2A65003B4BE0 /* UIImageView+Calculations.swift */; };
+		5FD57A42272A2A65003B4BE0 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A2F272A2A65003B4BE0 /* UIView+Animations.swift */; };
+		5FD57A43272A2A65003B4BE0 /* PopupDialogDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A30272A2A65003B4BE0 /* PopupDialogDefaultView.swift */; };
+		5FD57A44272A2A65003B4BE0 /* PopupDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A31272A2A65003B4BE0 /* PopupDialog.swift */; };
+		5FD57A45272A2A65003B4BE0 /* PopupDialogOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A32272A2A65003B4BE0 /* PopupDialogOverlayView.swift */; };
+		5FD57A46272A2A65003B4BE0 /* PopupDialogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A33272A2A65003B4BE0 /* PopupDialogButton.swift */; };
+		5FD57A47272A2A65003B4BE0 /* UIViewController+Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A34272A2A65003B4BE0 /* UIViewController+Visibility.swift */; };
+		5FD57A48272A2A65003B4BE0 /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A35272A2A65003B4BE0 /* TransitionAnimator.swift */; };
+		5FD57A49272A2A65003B4BE0 /* PopupDialog+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A36272A2A65003B4BE0 /* PopupDialog+Keyboard.swift */; };
+		5FD57A4A272A2A65003B4BE0 /* PopupDialogDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A37272A2A65003B4BE0 /* PopupDialogDefaultViewController.swift */; };
+		5FD57A4B272A2A65003B4BE0 /* TransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A38272A2A65003B4BE0 /* TransitionAnimations.swift */; };
+		5FD57A4C272A2A65003B4BE0 /* PopupDialogDefaultButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A39272A2A65003B4BE0 /* PopupDialogDefaultButtons.swift */; };
+		5FD57A4D272A2A65003B4BE0 /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A3A272A2A65003B4BE0 /* PresentationManager.swift */; };
+		5FD57A4E272A2A65003B4BE0 /* PopupDialogContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A3B272A2A65003B4BE0 /* PopupDialogContainerView.swift */; };
+		5FD57A4F272A2A65003B4BE0 /* DataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A3C272A2A65003B4BE0 /* DataStructure.swift */; };
+		5FD57A50272A2A65003B4BE0 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A3D272A2A65003B4BE0 /* Tools.swift */; };
+		5FD57A51272A2A65003B4BE0 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A3E272A2A65003B4BE0 /* Color.swift */; };
+		5FD57A59272FBAFD003B4BE0 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A53272FBAFD003B4BE0 /* Utility.swift */; };
+		5FD57A5F272FBB77003B4BE0 /* AHFCommandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A5E272FBB77003B4BE0 /* AHFCommandModel.swift */; };
+		5FD57A61272FBB9D003B4BE0 /* AHFReceivedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A60272FBB9D003B4BE0 /* AHFReceivedModel.swift */; };
+		5FD57A63272FBBB8003B4BE0 /* AHFDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A62272FBBB8003B4BE0 /* AHFDataStructure.swift */; };
+		5FD57A65272FBBCB003B4BE0 /* AHFViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD57A64272FBBCB003B4BE0 /* AHFViewModel.swift */; };
+		E5959AB4961DEF4945F34863 /* Pods_AHF_Remote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A135FAFC89C1F09F596BE5 /* Pods_AHF_Remote.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		39A135FAFC89C1F09F596BE5 /* Pods_AHF_Remote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AHF_Remote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F8EDFFA2738D78D0023BFCD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5F8EDFFC2738D7B40023BFCD /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		5F8EDFFE2738D7D20023BFCD /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		5F8EE004273A596E0023BFCD /* LockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
+		5F907EA7273CA8FD000650DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5F907EAB273CA9AA000650DD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5F907EAF273E3B36000650DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainSe.storyboard; sourceTree = "<group>"; };
+		5F907EB1273E3F25000650DD /* BootLoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootLoaderViewController.swift; sourceTree = "<group>"; };
+		5F907EB62741F2E6000650DD /* ConnectingDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingDialog.swift; sourceTree = "<group>"; };
+		5F907EB82741F512000650DD /* ReConnecting.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReConnecting.xib; sourceTree = "<group>"; };
+		5F907EB92741F512000650DD /* ReConnectingDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReConnectingDialog.swift; sourceTree = "<group>"; };
+		5F907EBC27420951000650DD /* Disconnect.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Disconnect.xib; sourceTree = "<group>"; };
+		5F907EBD27420951000650DD /* DisconnectDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisconnectDialog.swift; sourceTree = "<group>"; };
+		5F907EC427421990000650DD /* ManualDisconnectDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualDisconnectDialog.swift; sourceTree = "<group>"; };
+		5F907EC527421990000650DD /* ManualDisconnect.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManualDisconnect.xib; sourceTree = "<group>"; };
+		5F907EC827423DF0000650DD /* AllowBTAccessDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllowBTAccessDialog.swift; sourceTree = "<group>"; };
+		5F907EC927423DF0000650DD /* AllowBTAccess.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllowBTAccess.xib; sourceTree = "<group>"; };
+		5F907ED227473EA1000650DD /* ReConnecting_fr.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReConnecting_fr.xib; sourceTree = "<group>"; };
+		5F907ED627473FDA000650DD /* Connecting_fr.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Connecting_fr.xib; sourceTree = "<group>"; };
+		5F907ED8274740AA000650DD /* Connecting.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Connecting.xib; sourceTree = "<group>"; };
+		5FD57A072727DDF6003B4BE0 /* AHF Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AHF Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FD57A0A2727DDF6003B4BE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5FD57A0C2727DDF6003B4BE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5FD57A0E2727DDF6003B4BE0 /* ControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlViewController.swift; sourceTree = "<group>"; };
+		5FD57A112727DDF6003B4BE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5FD57A132727DDF7003B4BE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5FD57A162727DDF7003B4BE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5FD57A182727DDF7003B4BE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FD57A1F272A293A003B4BE0 /* BleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BleController.swift; sourceTree = "<group>"; };
+		5FD57A21272A2981003B4BE0 /* ControlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlModel.swift; sourceTree = "<group>"; };
+		5FD57A23272A2994003B4BE0 /* ControlViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlViewModel.swift; sourceTree = "<group>"; };
+		5FD57A26272A2A4F003B4BE0 /* SaveTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveTool.swift; sourceTree = "<group>"; };
+		5FD57A27272A2A4F003B4BE0 /* KeyAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyAction.swift; sourceTree = "<group>"; };
+		5FD57A2C272A2A65003B4BE0 /* InteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveTransition.swift; sourceTree = "<group>"; };
+		5FD57A2D272A2A65003B4BE0 /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		5FD57A2E272A2A65003B4BE0 /* UIImageView+Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Calculations.swift"; sourceTree = "<group>"; };
+		5FD57A2F272A2A65003B4BE0 /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
+		5FD57A30272A2A65003B4BE0 /* PopupDialogDefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultView.swift; sourceTree = "<group>"; };
+		5FD57A31272A2A65003B4BE0 /* PopupDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialog.swift; sourceTree = "<group>"; };
+		5FD57A32272A2A65003B4BE0 /* PopupDialogOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogOverlayView.swift; sourceTree = "<group>"; };
+		5FD57A33272A2A65003B4BE0 /* PopupDialogButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogButton.swift; sourceTree = "<group>"; };
+		5FD57A34272A2A65003B4BE0 /* UIViewController+Visibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Visibility.swift"; sourceTree = "<group>"; };
+		5FD57A35272A2A65003B4BE0 /* TransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimator.swift; sourceTree = "<group>"; };
+		5FD57A36272A2A65003B4BE0 /* PopupDialog+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PopupDialog+Keyboard.swift"; sourceTree = "<group>"; };
+		5FD57A37272A2A65003B4BE0 /* PopupDialogDefaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultViewController.swift; sourceTree = "<group>"; };
+		5FD57A38272A2A65003B4BE0 /* TransitionAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimations.swift; sourceTree = "<group>"; };
+		5FD57A39272A2A65003B4BE0 /* PopupDialogDefaultButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultButtons.swift; sourceTree = "<group>"; };
+		5FD57A3A272A2A65003B4BE0 /* PresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationManager.swift; sourceTree = "<group>"; };
+		5FD57A3B272A2A65003B4BE0 /* PopupDialogContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogContainerView.swift; sourceTree = "<group>"; };
+		5FD57A3C272A2A65003B4BE0 /* DataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructure.swift; sourceTree = "<group>"; };
+		5FD57A3D272A2A65003B4BE0 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		5FD57A3E272A2A65003B4BE0 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		5FD57A53272FBAFD003B4BE0 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		5FD57A5E272FBB77003B4BE0 /* AHFCommandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHFCommandModel.swift; sourceTree = "<group>"; };
+		5FD57A60272FBB9D003B4BE0 /* AHFReceivedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHFReceivedModel.swift; sourceTree = "<group>"; };
+		5FD57A62272FBBB8003B4BE0 /* AHFDataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHFDataStructure.swift; sourceTree = "<group>"; };
+		5FD57A64272FBBCB003B4BE0 /* AHFViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHFViewModel.swift; sourceTree = "<group>"; };
+		B19643705C460259D5CC7DCD /* Pods-AHF Remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AHF Remote.debug.xcconfig"; path = "Target Support Files/Pods-AHF Remote/Pods-AHF Remote.debug.xcconfig"; sourceTree = "<group>"; };
+		BEBD5DB09D99892A333C68E2 /* Pods-AHF Remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AHF Remote.release.xcconfig"; path = "Target Support Files/Pods-AHF Remote/Pods-AHF Remote.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FD57A042727DDF6003B4BE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5959AB4961DEF4945F34863 /* Pods_AHF_Remote.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28DE6FBA77E073DCF70223E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39A135FAFC89C1F09F596BE5 /* Pods_AHF_Remote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F907EB32741F25B000650DD /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				5F907EC827423DF0000650DD /* AllowBTAccessDialog.swift */,
+				5F907EC927423DF0000650DD /* AllowBTAccess.xib */,
+				5F907EC427421990000650DD /* ManualDisconnectDialog.swift */,
+				5F907EC527421990000650DD /* ManualDisconnect.xib */,
+				5F907EBD27420951000650DD /* DisconnectDialog.swift */,
+				5F907EBC27420951000650DD /* Disconnect.xib */,
+				5F907EB92741F512000650DD /* ReConnectingDialog.swift */,
+				5F907EB82741F512000650DD /* ReConnecting.xib */,
+				5F907ED227473EA1000650DD /* ReConnecting_fr.xib */,
+				5F907EB62741F2E6000650DD /* ConnectingDialog.swift */,
+				5F907ED8274740AA000650DD /* Connecting.xib */,
+				5F907ED627473FDA000650DD /* Connecting_fr.xib */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
+		5FD579FE2727DDF6003B4BE0 = {
+			isa = PBXGroup;
+			children = (
+				5FD57A52272FBAFD003B4BE0 /* Protocol */,
+				5FD57A092727DDF6003B4BE0 /* AHF Remote */,
+				5FD57A082727DDF6003B4BE0 /* Products */,
+				9F16226536F24B3DDD072B71 /* Pods */,
+				28DE6FBA77E073DCF70223E5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5FD57A082727DDF6003B4BE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FD57A072727DDF6003B4BE0 /* AHF Remote.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FD57A092727DDF6003B4BE0 /* AHF Remote */ = {
+			isa = PBXGroup;
+			children = (
+				5F907EB32741F25B000650DD /* Dialog */,
+				5FD57A2A272A2A65003B4BE0 /* Utility */,
+				5FD57A25272A2A4F003B4BE0 /* Tools */,
+				5FD57A1E272A293A003B4BE0 /* Bluetooth */,
+				5F907EA8273CA8FD000650DD /* Localizable.strings */,
+				5FD57A0A2727DDF6003B4BE0 /* AppDelegate.swift */,
+				5FD57A0C2727DDF6003B4BE0 /* SceneDelegate.swift */,
+				5FD57A21272A2981003B4BE0 /* ControlModel.swift */,
+				5FD57A23272A2994003B4BE0 /* ControlViewModel.swift */,
+				5FD57A0E2727DDF6003B4BE0 /* ControlViewController.swift */,
+				5F8EDFFC2738D7B40023BFCD /* SettingsModel.swift */,
+				5F8EDFFE2738D7D20023BFCD /* SettingsViewModel.swift */,
+				5F8EDFFA2738D78D0023BFCD /* SettingsViewController.swift */,
+				5F8EE004273A596E0023BFCD /* LockViewController.swift */,
+				5F907EB1273E3F25000650DD /* BootLoaderViewController.swift */,
+				5F907EAE273E3B36000650DD /* MainSe.storyboard */,
+				5FD57A102727DDF6003B4BE0 /* Main.storyboard */,
+				5FD57A132727DDF7003B4BE0 /* Assets.xcassets */,
+				5FD57A152727DDF7003B4BE0 /* LaunchScreen.storyboard */,
+				5FD57A182727DDF7003B4BE0 /* Info.plist */,
+			);
+			path = "AHF Remote";
+			sourceTree = "<group>";
+		};
+		5FD57A1E272A293A003B4BE0 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				5FD57A1F272A293A003B4BE0 /* BleController.swift */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		5FD57A25272A2A4F003B4BE0 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5FD57A26272A2A4F003B4BE0 /* SaveTool.swift */,
+				5FD57A27272A2A4F003B4BE0 /* KeyAction.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		5FD57A2A272A2A65003B4BE0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				5FD57A2B272A2A65003B4BE0 /* PopupDialog */,
+				5FD57A3C272A2A65003B4BE0 /* DataStructure.swift */,
+				5FD57A3D272A2A65003B4BE0 /* Tools.swift */,
+				5FD57A3E272A2A65003B4BE0 /* Color.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		5FD57A2B272A2A65003B4BE0 /* PopupDialog */ = {
+			isa = PBXGroup;
+			children = (
+				5FD57A2C272A2A65003B4BE0 /* InteractiveTransition.swift */,
+				5FD57A2D272A2A65003B4BE0 /* PresentationController.swift */,
+				5FD57A2E272A2A65003B4BE0 /* UIImageView+Calculations.swift */,
+				5FD57A2F272A2A65003B4BE0 /* UIView+Animations.swift */,
+				5FD57A30272A2A65003B4BE0 /* PopupDialogDefaultView.swift */,
+				5FD57A31272A2A65003B4BE0 /* PopupDialog.swift */,
+				5FD57A32272A2A65003B4BE0 /* PopupDialogOverlayView.swift */,
+				5FD57A33272A2A65003B4BE0 /* PopupDialogButton.swift */,
+				5FD57A34272A2A65003B4BE0 /* UIViewController+Visibility.swift */,
+				5FD57A35272A2A65003B4BE0 /* TransitionAnimator.swift */,
+				5FD57A36272A2A65003B4BE0 /* PopupDialog+Keyboard.swift */,
+				5FD57A37272A2A65003B4BE0 /* PopupDialogDefaultViewController.swift */,
+				5FD57A38272A2A65003B4BE0 /* TransitionAnimations.swift */,
+				5FD57A39272A2A65003B4BE0 /* PopupDialogDefaultButtons.swift */,
+				5FD57A3A272A2A65003B4BE0 /* PresentationManager.swift */,
+				5FD57A3B272A2A65003B4BE0 /* PopupDialogContainerView.swift */,
+			);
+			path = PopupDialog;
+			sourceTree = "<group>";
+		};
+		5FD57A52272FBAFD003B4BE0 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				5FD57A53272FBAFD003B4BE0 /* Utility.swift */,
+				5FD57A54272FBAFD003B4BE0 /* AHF */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		5FD57A54272FBAFD003B4BE0 /* AHF */ = {
+			isa = PBXGroup;
+			children = (
+				5FD57A5E272FBB77003B4BE0 /* AHFCommandModel.swift */,
+				5FD57A60272FBB9D003B4BE0 /* AHFReceivedModel.swift */,
+				5FD57A62272FBBB8003B4BE0 /* AHFDataStructure.swift */,
+				5FD57A64272FBBCB003B4BE0 /* AHFViewModel.swift */,
+			);
+			path = AHF;
+			sourceTree = "<group>";
+		};
+		9F16226536F24B3DDD072B71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B19643705C460259D5CC7DCD /* Pods-AHF Remote.debug.xcconfig */,
+				BEBD5DB09D99892A333C68E2 /* Pods-AHF Remote.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5FD57A062727DDF6003B4BE0 /* AHF Remote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FD57A1B2727DDF7003B4BE0 /* Build configuration list for PBXNativeTarget "AHF Remote" */;
+			buildPhases = (
+				A01EE2303CB3455DFA4AB4A3 /* [CP] Check Pods Manifest.lock */,
+				5FD57A032727DDF6003B4BE0 /* Sources */,
+				5FD57A042727DDF6003B4BE0 /* Frameworks */,
+				5FD57A052727DDF6003B4BE0 /* Resources */,
+				02173F3EA16C5F82FD816627 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AHF Remote";
+			productName = "AHF Remote";
+			productReference = 5FD57A072727DDF6003B4BE0 /* AHF Remote.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5FD579FF2727DDF6003B4BE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					5FD57A062727DDF6003B4BE0 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 5FD57A022727DDF6003B4BE0 /* Build configuration list for PBXProject "AHF Remote" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				fr,
+			);
+			mainGroup = 5FD579FE2727DDF6003B4BE0;
+			productRefGroup = 5FD57A082727DDF6003B4BE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5FD57A062727DDF6003B4BE0 /* AHF Remote */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5FD57A052727DDF6003B4BE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F907EBA2741F512000650DD /* ReConnecting.xib in Resources */,
+				5F907EC727421990000650DD /* ManualDisconnect.xib in Resources */,
+				5FD57A172727DDF7003B4BE0 /* LaunchScreen.storyboard in Resources */,
+				5F907EA6273CA8FD000650DD /* Localizable.strings in Resources */,
+				5F907EB0273E3B36000650DD /* MainSe.storyboard in Resources */,
+				5FD57A142727DDF7003B4BE0 /* Assets.xcassets in Resources */,
+				5FD57A122727DDF6003B4BE0 /* Main.storyboard in Resources */,
+				5F907ED9274740AA000650DD /* Connecting.xib in Resources */,
+				5F907EBE27420951000650DD /* Disconnect.xib in Resources */,
+				5F907ED327473EA1000650DD /* ReConnecting_fr.xib in Resources */,
+				5F907ED727473FDA000650DD /* Connecting_fr.xib in Resources */,
+				5F907ECB27423DF0000650DD /* AllowBTAccess.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02173F3EA16C5F82FD816627 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AHF Remote/Pods-AHF Remote-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AHF Remote/Pods-AHF Remote-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AHF Remote/Pods-AHF Remote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A01EE2303CB3455DFA4AB4A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AHF Remote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FD57A032727DDF6003B4BE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FD57A59272FBAFD003B4BE0 /* Utility.swift in Sources */,
+				5FD57A43272A2A65003B4BE0 /* PopupDialogDefaultView.swift in Sources */,
+				5F8EDFFD2738D7B40023BFCD /* SettingsModel.swift in Sources */,
+				5F8EDFFB2738D78D0023BFCD /* SettingsViewController.swift in Sources */,
+				5FD57A63272FBBB8003B4BE0 /* AHFDataStructure.swift in Sources */,
+				5FD57A0F2727DDF6003B4BE0 /* ControlViewController.swift in Sources */,
+				5FD57A5F272FBB77003B4BE0 /* AHFCommandModel.swift in Sources */,
+				5FD57A46272A2A65003B4BE0 /* PopupDialogButton.swift in Sources */,
+				5FD57A29272A2A4F003B4BE0 /* KeyAction.swift in Sources */,
+				5FD57A3F272A2A65003B4BE0 /* InteractiveTransition.swift in Sources */,
+				5FD57A20272A293A003B4BE0 /* BleController.swift in Sources */,
+				5FD57A24272A2994003B4BE0 /* ControlViewModel.swift in Sources */,
+				5FD57A42272A2A65003B4BE0 /* UIView+Animations.swift in Sources */,
+				5FD57A65272FBBCB003B4BE0 /* AHFViewModel.swift in Sources */,
+				5FD57A0B2727DDF6003B4BE0 /* AppDelegate.swift in Sources */,
+				5F8EE005273A596E0023BFCD /* LockViewController.swift in Sources */,
+				5FD57A4A272A2A65003B4BE0 /* PopupDialogDefaultViewController.swift in Sources */,
+				5FD57A4D272A2A65003B4BE0 /* PresentationManager.swift in Sources */,
+				5FD57A4E272A2A65003B4BE0 /* PopupDialogContainerView.swift in Sources */,
+				5FD57A4B272A2A65003B4BE0 /* TransitionAnimations.swift in Sources */,
+				5FD57A50272A2A65003B4BE0 /* Tools.swift in Sources */,
+				5F907ECA27423DF0000650DD /* AllowBTAccessDialog.swift in Sources */,
+				5F8EDFFF2738D7D20023BFCD /* SettingsViewModel.swift in Sources */,
+				5FD57A61272FBB9D003B4BE0 /* AHFReceivedModel.swift in Sources */,
+				5FD57A49272A2A65003B4BE0 /* PopupDialog+Keyboard.swift in Sources */,
+				5FD57A22272A2981003B4BE0 /* ControlModel.swift in Sources */,
+				5FD57A47272A2A65003B4BE0 /* UIViewController+Visibility.swift in Sources */,
+				5FD57A51272A2A65003B4BE0 /* Color.swift in Sources */,
+				5FD57A48272A2A65003B4BE0 /* TransitionAnimator.swift in Sources */,
+				5F907EBB2741F512000650DD /* ReConnectingDialog.swift in Sources */,
+				5F907EC627421990000650DD /* ManualDisconnectDialog.swift in Sources */,
+				5FD57A4F272A2A65003B4BE0 /* DataStructure.swift in Sources */,
+				5FD57A0D2727DDF6003B4BE0 /* SceneDelegate.swift in Sources */,
+				5FD57A45272A2A65003B4BE0 /* PopupDialogOverlayView.swift in Sources */,
+				5F907EB72741F2E6000650DD /* ConnectingDialog.swift in Sources */,
+				5F907EBF27420951000650DD /* DisconnectDialog.swift in Sources */,
+				5FD57A28272A2A4F003B4BE0 /* SaveTool.swift in Sources */,
+				5F907EB2273E3F25000650DD /* BootLoaderViewController.swift in Sources */,
+				5FD57A4C272A2A65003B4BE0 /* PopupDialogDefaultButtons.swift in Sources */,
+				5FD57A40272A2A65003B4BE0 /* PresentationController.swift in Sources */,
+				5FD57A44272A2A65003B4BE0 /* PopupDialog.swift in Sources */,
+				5FD57A41272A2A65003B4BE0 /* UIImageView+Calculations.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5F907EA8273CA8FD000650DD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F907EA7273CA8FD000650DD /* en */,
+				5F907EAB273CA9AA000650DD /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		5F907EAE273E3B36000650DD /* MainSe.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F907EAF273E3B36000650DD /* Base */,
+			);
+			name = MainSe.storyboard;
+			sourceTree = "<group>";
+		};
+		5FD57A102727DDF6003B4BE0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FD57A112727DDF6003B4BE0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5FD57A152727DDF7003B4BE0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FD57A162727DDF7003B4BE0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5FD57A192727DDF7003B4BE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5FD57A1A2727DDF7003B4BE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5FD57A1C2727DDF7003B4BE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B19643705C460259D5CC7DCD /* Pods-AHF Remote.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = R9E2LGS6VB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AHF Remote/Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This will allow \"AHF Medical Bed\" to find and connect to Bluetooth accessories.This app may also use Bluetooth to know when you're nearby.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "This will allow \"AHF Medical Bed\" to find and connect to Bluetooth accessories.This app may also use Bluetooth to know when you're nearby.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.timotion.AHF-Remote";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5FD57A1D2727DDF7003B4BE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEBD5DB09D99892A333C68E2 /* Pods-AHF Remote.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = R9E2LGS6VB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AHF Remote/Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This will allow \"AHF Medical Bed\" to find and connect to Bluetooth accessories.This app may also use Bluetooth to know when you're nearby.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "This will allow \"AHF Medical Bed\" to find and connect to Bluetooth accessories.This app may also use Bluetooth to know when you're nearby.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.timotion.AHF-Remote";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FD57A022727DDF6003B4BE0 /* Build configuration list for PBXProject "AHF Remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FD57A192727DDF7003B4BE0 /* Debug */,
+				5FD57A1A2727DDF7003B4BE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FD57A1B2727DDF7003B4BE0 /* Build configuration list for PBXNativeTarget "AHF Remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FD57A1C2727DDF7003B4BE0 /* Debug */,
+				5FD57A1D2727DDF7003B4BE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5FD579FF2727DDF6003B4BE0 /* Project object */;
+}

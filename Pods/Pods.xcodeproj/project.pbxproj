@@ -1,0 +1,1626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0091E4134A0D7F54CCE654E1EFB490BE /* DistancePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = AF87A12065890AB5702B17F453FB1F35 /* DistancePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F89D06BFB92779FBCCB17287AFC55AE /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BDA8230569BF877C4DA19761A70ED7 /* Accelerate.framework */; };
+		0FC023279EE129DB7826EC92B6810C8D /* ActionSheetPicker-3.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB8C8022515AD9C206745C79AEF44AB /* ActionSheetPicker-3.0-dummy.m */; };
+		12FA8AB2ACBB820E7EC413726F9D56BC /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6775DE254726A7FC36C1225EC2CFFBC5 /* AbstractActionSheetPicker.m */; };
+		19767DBA2980A1DF8DD78E2CC681C627 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 027A2094A9FA92F3C6AF93E4D5AF44DD /* ActionSheetStringPicker.m */; };
+		19CC2D4DCD2CA55D48957550E806BD78 /* Malert+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89135DFB687D6B1AE8BF704F40240B34 /* Malert+Actions.swift */; };
+		1BF47E1077E08534F5763BCD7FDF8149 /* MalertButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0B6376C2D00248032E64C23E748F80 /* MalertButtonView.swift */; };
+		1E909EB12C1EAC4BA141FB502654D49B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA0B378BCC9D218E8774A30345D6D0D /* Foundation.framework */; };
+		20C10986D19FDED21105A0AFE027BD12 /* BaseTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B39B9FE772CCE23F82F75DEABDF04BB /* BaseTransitioning.swift */; };
+		216B7611B7E9C5B887CCF5CB130C1EF2 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D75BBFD23D8139EAB16439A0F65FA /* KDCircularProgress.swift */; };
+		21B111A777BA2A29F6041F8A7C4CA60C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA0B378BCC9D218E8774A30345D6D0D /* Foundation.framework */; };
+		25D1324929C7409F04FCC03265F88711 /* DynamicBlurView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89AB193104FC30BA7EFCA6DA1EE9656A /* DynamicBlurView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		264E80CBBA0EE5E4FA993BB19893405C /* CALayer+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC43A72C7CBD3F891502D5E1A32C04 /* CALayer+Conversion.swift */; };
+		30B9706BE643B5F0A0530D55403692A2 /* ActionSheetPicker-3.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7E05A1FEC680DA9CE07572CCFBAD9F /* ActionSheetPicker-3.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3228EF9BB4197B00304ACEBEC57BDA5E /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AACAE2B1F294F8FFEF57AC4D7E5963 /* SWActionSheet.m */; };
+		35C8BEBD5E0F43C9178D6D187992DC1D /* CGRect+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F6BC3BD386B4730E8973B823270D9 /* CGRect+Conversion.swift */; };
+		36DB786F4939EB44AC945F20BE77AA45 /* Malert_brand.png in Resources */ = {isa = PBXBuildFile; fileRef = DEB57E4A904BCEB5C5A41A5CF8E57B87 /* Malert_brand.png */; };
+		3E20ACBD443C2D7BBF17DBE83CBC521F /* ActionSheetLocalePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E07C7CCCAEA450C0121FEE2A8E25F93 /* ActionSheetLocalePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3EFFEA8D07C797B48D4F9BB818FF1150 /* CGContext+CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0F6B7769C4C8C436430F652B5E8F50 /* CGContext+CGImage.swift */; };
+		3FB00B6187FADACF9F2E2463C6CB37D3 /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C00B5942A14F94BB44B1CE1AE6F46EFF /* ActionSheetCustomPickerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4007288570A129B4E922875A51663243 /* SWActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = D36801610F3DF1154CFE38DF69D696B5 /* SWActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44FDC841C20165E2DE68E31737A401DC /* DeviceKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1406587A65D3BEFB6D58A3D7E59047A /* DeviceKit-dummy.m */; };
+		46EDB1BAE65CDE33C020B8F4B0163343 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA0B378BCC9D218E8774A30345D6D0D /* Foundation.framework */; };
+		4BBDAE80B2577F2F7312A6EC1FA23A30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA0B378BCC9D218E8774A30345D6D0D /* Foundation.framework */; };
+		50EDFC88D8E5515FEA35B2CD43715CAA /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7942F9EE81C5770DD26C3234E5F21235 /* ActionSheetDatePicker.m */; };
+		558986D0D52FC340DE534D4F38CA8D3B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2BFE71ADE37C5C6F70A845F3DA5480 /* UIKit.framework */; };
+		5ED8F5A7087CB6ABC1D1261752BA4D77 /* ActionSheetDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = A95B634765BF1ED6A192CE2A08360256 /* ActionSheetDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FD41A917CA8463F698402B613E9E952 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A5BA3E8C66751A3D5ADE8FCB05617 /* Extensions.swift */; };
+		63F4C5BF08315A8146FD3FDD1392A22A /* Pods-AHF Remote-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FBAEBF757BFB1EABBF34B990E0CC40FD /* Pods-AHF Remote-dummy.m */; };
+		6AE7C13634E07A7D4DAD613EA245A470 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F5565FE341628BD0E5DFF1459DBA9ED5 /* ActionSheetDistancePicker.m */; };
+		6C0E1FE320877F5995BCC774C66DBF24 /* MalertInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C106668FD00F01785847B34EB747D6EE /* MalertInteractiveTransition.swift */; };
+		6D4502CC7407FB85774DAF2ADE7E867C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2BFE71ADE37C5C6F70A845F3DA5480 /* UIKit.framework */; };
+		76DFBADB0A35F5B48FC5BA2A9C17E70D /* MalertPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE99CB64907C7226FE2B20D3AB0596 /* MalertPresentationManager.swift */; };
+		77117CD475B780B9D5B268747E68C8DD /* BaseMalertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C826D6C696D06BB862EC10A0D5B44235 /* BaseMalertViewController.swift */; };
+		786A144830D1325D620C1F87AAB144E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA0B378BCC9D218E8774A30345D6D0D /* Foundation.framework */; };
+		788A5D4A711063C633AB8283697CB882 /* MalertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF918EF6D280822FEB7652BD74D96EE9 /* MalertView.swift */; };
+		8539B5E5F6833C748700B1909DD1FE18 /* Malert-Malert in Resources */ = {isa = PBXBuildFile; fileRef = B931259D0FFAF5FE5E51413E8C03910C /* Malert-Malert */; };
+		9140338ECC3064BD1EE320D8E98C0EBF /* MalertPresentTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763D52C8C6A3C4EA74F5683258929B8D /* MalertPresentTransitioning.swift */; };
+		966D55A9CA952E2ECE1CFA25582235E4 /* BlurLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1508B861923F250EAD54DEF6E0F35257 /* BlurLayer.swift */; };
+		9694CD5A237554B90A9D0DA56F3C8536 /* TrackingMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50ACF5D7B06DB06DA578162938B639C /* TrackingMode.swift */; };
+		9D59535CF4F4C867E488363A17D18809 /* ActionSheetStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9A5BA81641EF43D5AB4BDB0F405B2A /* ActionSheetStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0DF5A3CB4295468A86691F1269C83AD /* CGImage+Accelerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D42E12A014FEB9AC501D36F85B4E6CF /* CGImage+Accelerate.swift */; };
+		A2A4B9698B2D4AFF38D5184BE0CA9C3D /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 72392EEA3C2A7CCFC7D33BD5DE5B0887 /* AbstractActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7CE548A50A2A37EFAB9696A45B6F460 /* DynamicBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E75A28BC6926ED2405C0BF1E195E784 /* DynamicBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE419A0EB119A1B529D3E851011B031C /* DeviceKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F28C8C8686050BCF62BFE58E40C38605 /* DeviceKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEAD72B333D50BDF181D1D030FAAF94E /* Malert+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5764068640636FAA28C47F02104E66A /* Malert+Constraints.swift */; };
+		B0CCF957D8FF4C63088AE113E49C5433 /* DynamicBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0151EF0E05730023444E0B10E2D725C /* DynamicBlurView.swift */; };
+		B2F54FD222DB9213AC3843DACFA95759 /* Pods-AHF Remote-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9C172832D853B99F90190E0D7561BEF /* Pods-AHF Remote-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3556BB6B3BE4910C609C54B2FAC9772 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 298738AD5FE98E47AC2D46EB22C38EA6 /* ActionSheetCustomPicker.m */; };
+		B779C5D0133D2074CB2EDAC61C4C5475 /* ActionSheetCustomPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 59ECC50D01D99320DADDDD4AFF3541F3 /* ActionSheetCustomPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8F1699C2BC872224BF0085B2F0DADF5 /* CaptureQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82ED001631EB3E9BBA70EA95FAB496 /* CaptureQuality.swift */; };
+		BADFD2F6E2EA50790310407AB413FCCE /* mockup.png in Resources */ = {isa = PBXBuildFile; fileRef = 43F24061A91435201ACDB0A578C1BA06 /* mockup.png */; };
+		BB92BC420CB7C28DAC4C0DAF10F31E61 /* DynamicBlurView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E690C1F6BA3204AE3A04755CB2C1A3 /* DynamicBlurView-dummy.m */; };
+		BC92DAA5EA59849601A1080AA7671D4E /* ActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DFE60C74BF0D136C484B4415166D32A /* ActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1627F12A88C27FFAFD654C54482B48F /* Malert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1CF8FCC8EB9E0C2DDF4CAC1B407AC6 /* Malert-dummy.m */; };
+		C5C71141A72424BC3711B53BB4726744 /* Device.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C20EE88A7A856BA9697364ABAD5105 /* Device.generated.swift */; };
+		CD151B24C25809170DECD96AA3F2989E /* ActionSheetDistancePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF68FE43E498669CEC3A5B296F8D768 /* ActionSheetDistancePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D51D1DC50058F86C0300F1AB723ACCD0 /* KDCircularProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31250644DB1CA0034CAA8AF0119ED870 /* KDCircularProgress-dummy.m */; };
+		DC2C88E51CAEEEDC1DA6147971764C60 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CB1643DDAEE35755D827F23A607C38 /* DistancePickerView.m */; };
+		DF358DE7F5E5B27145A0F7B09D4D8C1F /* Malert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED41FDCEFC974BE495839A4468E8587D /* Malert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E147BB0D0FEFA800108456FC0F9F0097 /* KDCircularProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 43DF410EB25521275D57AD62FFC87449 /* KDCircularProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBAADEA906B697C89AAA135E9B5DA33F /* MalertDimissTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAB2F41DDCA1629285BC64F3611E71 /* MalertDimissTransitioning.swift */; };
+		EE783D3B9E15DFFD23C61D2C552B49EA /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4D737948554254D79C92EFAE256D90 /* ActionSheetLocalePicker.m */; };
+		EEC7477ABC2DC5D98E61613141784919 /* ActionSheetMultipleStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 61EAC0BDD081C861B1B7491A385BD77E /* ActionSheetMultipleStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3E19AB6556EBD2BA6DD2104CEA1366E /* UIImage+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D960094411749778ACBC03B487FE4C1 /* UIImage+Blur.swift */; };
+		F4D2ADA7E1DAB3AB844FCF231E0D72E5 /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D985D2D3F641E734E7AEBE3FDE437A /* ActionSheetMultipleStringPicker.m */; };
+		F94192A7DCCC8FFB97B1C0D6E0D2CCEF /* Malert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00E956A80A02129991DD3945777172 /* Malert.swift */; };
+		FA2401E836C2E0B755D56D0D91B098E1 /* MalertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439BA4432BD99329FD5C6C1E9B75968 /* MalertAction.swift */; };
+		FDF0197F8F4D8AF4785516AD496786ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA0B378BCC9D218E8774A30345D6D0D /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		615743D81E968F2B47FA27CD7C3713B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CDD1C6C8885D07092D8EA708AAC0E53;
+			remoteInfo = DeviceKit;
+		};
+		7FC84D8AD10F05F8002BA8CB95FDC4F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B117881115A50B47906E45574440276A;
+			remoteInfo = Malert;
+		};
+		C88F18C1E5D5301C5DA8DF365F54E5C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F062B4408517689AF1DA5F570405334C;
+			remoteInfo = "Malert-Malert";
+		};
+		D34F75F10C5E143127CE3FB7C9BA72A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A43B25DDF20FCB9228471F8F5135C866;
+			remoteInfo = "ActionSheetPicker-3.0";
+		};
+		E750A8AB83784AF9DE09B78885D02943 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A90A4C95F6872F771B717319EABD30D;
+			remoteInfo = KDCircularProgress;
+		};
+		EAE00C70FA0596EC0CA602291D8DAB64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D914FA2F03C860D5133BA2DB87C594A;
+			remoteInfo = DynamicBlurView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		027A2094A9FA92F3C6AF93E4D5AF44DD /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetStringPicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		028A5900914375F66C3C6FB39DBEB2E6 /* KDCircularProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KDCircularProgress-prefix.pch"; sourceTree = "<group>"; };
+		092EE22F20AE667CEF2358EF3F41B31A /* ActionSheetPicker-3.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0.release.xcconfig"; sourceTree = "<group>"; };
+		0B0F6B7769C4C8C436430F652B5E8F50 /* CGContext+CGImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGContext+CGImage.swift"; path = "Sources/DynamicBlurView/CGContext+CGImage.swift"; sourceTree = "<group>"; };
+		0D42E12A014FEB9AC501D36F85B4E6CF /* CGImage+Accelerate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGImage+Accelerate.swift"; path = "Sources/DynamicBlurView/CGImage+Accelerate.swift"; sourceTree = "<group>"; };
+		0D9D75BBFD23D8139EAB16439A0F65FA /* KDCircularProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KDCircularProgress.swift; path = KDCircularProgress/KDCircularProgress.swift; sourceTree = "<group>"; };
+		10CC43A72C7CBD3F891502D5E1A32C04 /* CALayer+Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+Conversion.swift"; path = "Sources/DynamicBlurView/CALayer+Conversion.swift"; sourceTree = "<group>"; };
+		114184EA8AA32CB7395A923570993CD6 /* ActionSheetPicker-3.0-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ActionSheetPicker-3.0-Info.plist"; sourceTree = "<group>"; };
+		11B5EB5C99503242C577435305886813 /* Malert-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Malert-Info.plist"; sourceTree = "<group>"; };
+		14BDA8230569BF877C4DA19761A70ED7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		1508B861923F250EAD54DEF6E0F35257 /* BlurLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurLayer.swift; path = Sources/DynamicBlurView/BlurLayer.swift; sourceTree = "<group>"; };
+		18C20EE88A7A856BA9697364ABAD5105 /* Device.generated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Device.generated.swift; path = Source/Device.generated.swift; sourceTree = "<group>"; };
+		190D7383CCEFD8AB3F8CB93098A3F214 /* DeviceKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DeviceKit; path = DeviceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BE6CA08F0C975450B585363C07F072D /* Pods-AHF Remote.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AHF Remote.modulemap"; sourceTree = "<group>"; };
+		1E07C7CCCAEA450C0121FEE2A8E25F93 /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetLocalePicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetLocalePicker.h; sourceTree = "<group>"; };
+		1FF68FE43E498669CEC3A5B296F8D768 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDistancePicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		26A68EC205310D421BBFF4FBCBCE0E7A /* DeviceKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DeviceKit.debug.xcconfig; sourceTree = "<group>"; };
+		27CA7C40C402C1160FE323955AB078D1 /* Malert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Malert-prefix.pch"; sourceTree = "<group>"; };
+		298738AD5FE98E47AC2D46EB22C38EA6 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetCustomPicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		2C1CF8FCC8EB9E0C2DDF4CAC1B407AC6 /* Malert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Malert-dummy.m"; sourceTree = "<group>"; };
+		2D960094411749778ACBC03B487FE4C1 /* UIImage+Blur.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Blur.swift"; path = "Sources/DynamicBlurView/UIImage+Blur.swift"; sourceTree = "<group>"; };
+		2E2BFE71ADE37C5C6F70A845F3DA5480 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		2EB20503508CC91EF92E2777C51A3EFC /* DeviceKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DeviceKit.release.xcconfig; sourceTree = "<group>"; };
+		31250644DB1CA0034CAA8AF0119ED870 /* KDCircularProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KDCircularProgress-dummy.m"; sourceTree = "<group>"; };
+		31A86CAF01C71F3CA995E31075D812C3 /* KDCircularProgress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KDCircularProgress.debug.xcconfig; sourceTree = "<group>"; };
+		3514C3015AF1F42E0F81F68CA1F02262 /* DynamicBlurView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DynamicBlurView.modulemap; sourceTree = "<group>"; };
+		35CB1643DDAEE35755D827F23A607C38 /* DistancePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DistancePickerView.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/DistancePickerView.m; sourceTree = "<group>"; };
+		367F08ADCF4FD36964C5738C360B4BAE /* Malert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Malert.modulemap; sourceTree = "<group>"; };
+		3B8C08382EEF77515495E2DC426D51E2 /* DynamicBlurView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicBlurView-prefix.pch"; sourceTree = "<group>"; };
+		3BAAB2F41DDCA1629285BC64F3611E71 /* MalertDimissTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MalertDimissTransitioning.swift; path = Malert/Classes/Animations/MalertDimissTransitioning.swift; sourceTree = "<group>"; };
+		3DC694B59657E4DA91A7549A08516FBA /* Pods-AHF Remote */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AHF Remote"; path = Pods_AHF_Remote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FA0B378BCC9D218E8774A30345D6D0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		43DF410EB25521275D57AD62FFC87449 /* KDCircularProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KDCircularProgress-umbrella.h"; sourceTree = "<group>"; };
+		43F24061A91435201ACDB0A578C1BA06 /* mockup.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = mockup.png; path = Malert/Assets/mockup.png; sourceTree = "<group>"; };
+		44D985D2D3F641E734E7AEBE3FDE437A /* ActionSheetMultipleStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetMultipleStringPicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetMultipleStringPicker.m; sourceTree = "<group>"; };
+		45DC009AF8113C1B837AD5174AE2F95E /* Pods-AHF Remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AHF Remote.debug.xcconfig"; sourceTree = "<group>"; };
+		4B39B9FE772CCE23F82F75DEABDF04BB /* BaseTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseTransitioning.swift; path = Malert/Classes/Animations/BaseTransitioning.swift; sourceTree = "<group>"; };
+		4FB8C06F33F490BB1C3FC50F2AB11893 /* DynamicBlurView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DynamicBlurView-Info.plist"; sourceTree = "<group>"; };
+		54E5F27D20311E7104446CF2841055A9 /* DynamicBlurView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicBlurView.debug.xcconfig; sourceTree = "<group>"; };
+		55AACAE2B1F294F8FFEF57AC4D7E5963 /* SWActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWActionSheet.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/SWActionSheet.m; sourceTree = "<group>"; };
+		59ECC50D01D99320DADDDD4AFF3541F3 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		5B9D7FD140521A3F641EAD84C1EDE1E6 /* DeviceKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeviceKit-prefix.pch"; sourceTree = "<group>"; };
+		5E9A5BA81641EF43D5AB4BDB0F405B2A /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetStringPicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		61EAC0BDD081C861B1B7491A385BD77E /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetMultipleStringPicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
+		6775DE254726A7FC36C1225EC2CFFBC5 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractActionSheetPicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		6DFE60C74BF0D136C484B4415166D32A /* ActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetPicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetPicker.h; sourceTree = "<group>"; };
+		6E7E05A1FEC680DA9CE07572CCFBAD9F /* ActionSheetPicker-3.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-umbrella.h"; sourceTree = "<group>"; };
+		72392EEA3C2A7CCFC7D33BD5DE5B0887 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractActionSheetPicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		763D52C8C6A3C4EA74F5683258929B8D /* MalertPresentTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MalertPresentTransitioning.swift; path = Malert/Classes/Animations/MalertPresentTransitioning.swift; sourceTree = "<group>"; };
+		7942F9EE81C5770DD26C3234E5F21235 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDatePicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		7A82ED001631EB3E9BBA70EA95FAB496 /* CaptureQuality.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CaptureQuality.swift; path = Sources/DynamicBlurView/CaptureQuality.swift; sourceTree = "<group>"; };
+		86C4A2D817E6CFFF31BF75161625FD5D /* DynamicBlurView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DynamicBlurView; path = DynamicBlurView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89135DFB687D6B1AE8BF704F40240B34 /* Malert+Actions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Malert+Actions.swift"; path = "Malert/Classes/Malert/Malert+Actions.swift"; sourceTree = "<group>"; };
+		89AB193104FC30BA7EFCA6DA1EE9656A /* DynamicBlurView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicBlurView-umbrella.h"; sourceTree = "<group>"; };
+		8C015C45342F9E16F58B6A3899F3195A /* Pods-AHF Remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AHF Remote.release.xcconfig"; sourceTree = "<group>"; };
+		94A65CAC8215F06D8A13AB4F409CB8ED /* Malert */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Malert; path = Malert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94E690C1F6BA3204AE3A04755CB2C1A3 /* DynamicBlurView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DynamicBlurView-dummy.m"; sourceTree = "<group>"; };
+		986013F6D145800DA92D3473C519EBD0 /* DeviceKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DeviceKit.modulemap; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E75A28BC6926ED2405C0BF1E195E784 /* DynamicBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DynamicBlurView.h; path = Sources/DynamicBlurView/DynamicBlurView.h; sourceTree = "<group>"; };
+		9EE7B1126EDC002AF8EA9CD0CE8B47FD /* KDCircularProgress-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KDCircularProgress-Info.plist"; sourceTree = "<group>"; };
+		A0151EF0E05730023444E0B10E2D725C /* DynamicBlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicBlurView.swift; path = Sources/DynamicBlurView/DynamicBlurView.swift; sourceTree = "<group>"; };
+		A1406587A65D3BEFB6D58A3D7E59047A /* DeviceKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DeviceKit-dummy.m"; sourceTree = "<group>"; };
+		A2276731E479DBF239004A51B463CAD2 /* ResourceBundle-Malert-Malert-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Malert-Malert-Info.plist"; sourceTree = "<group>"; };
+		A735E6D02FF86D15757003D5DC39029A /* KDCircularProgress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KDCircularProgress.release.xcconfig; sourceTree = "<group>"; };
+		A95B634765BF1ED6A192CE2A08360256 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDatePicker.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		AE5DB15E0958CA1F83B70D7CF228011D /* DynamicBlurView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicBlurView.release.xcconfig; sourceTree = "<group>"; };
+		AF87A12065890AB5702B17F453FB1F35 /* DistancePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DistancePickerView.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/DistancePickerView.h; sourceTree = "<group>"; };
+		B439BA4432BD99329FD5C6C1E9B75968 /* MalertAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MalertAction.swift; path = Malert/Classes/MalertButtonView/MalertAction.swift; sourceTree = "<group>"; };
+		B5764068640636FAA28C47F02104E66A /* Malert+Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Malert+Constraints.swift"; path = "Malert/Classes/Malert/Malert+Constraints.swift"; sourceTree = "<group>"; };
+		B931259D0FFAF5FE5E51413E8C03910C /* Malert-Malert */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Malert-Malert"; path = Malert.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA8F6BC3BD386B4730E8973B823270D9 /* CGRect+Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+Conversion.swift"; path = "Sources/DynamicBlurView/CGRect+Conversion.swift"; sourceTree = "<group>"; };
+		BBE70F576FDE5020256B47858918AE65 /* ActionSheetPicker-3.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ActionSheetPicker-3.0.debug.xcconfig"; sourceTree = "<group>"; };
+		BE06C63A6161B0D673C8FD4952CC0E4F /* Malert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Malert.release.xcconfig; sourceTree = "<group>"; };
+		BF918EF6D280822FEB7652BD74D96EE9 /* MalertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MalertView.swift; path = Malert/Classes/MalertView/MalertView.swift; sourceTree = "<group>"; };
+		C00B5942A14F94BB44B1CE1AE6F46EFF /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPickerDelegate.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		C106668FD00F01785847B34EB747D6EE /* MalertInteractiveTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MalertInteractiveTransition.swift; path = Malert/Classes/Animations/MalertInteractiveTransition.swift; sourceTree = "<group>"; };
+		C826D6C696D06BB862EC10A0D5B44235 /* BaseMalertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseMalertViewController.swift; path = Malert/Classes/Base/BaseMalertViewController.swift; sourceTree = "<group>"; };
+		C9C172832D853B99F90190E0D7561BEF /* Pods-AHF Remote-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AHF Remote-umbrella.h"; sourceTree = "<group>"; };
+		D36801610F3DF1154CFE38DF69D696B5 /* SWActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/SWActionSheet.h; sourceTree = "<group>"; };
+		D50ACF5D7B06DB06DA578162938B639C /* TrackingMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrackingMode.swift; path = Sources/DynamicBlurView/TrackingMode.swift; sourceTree = "<group>"; };
+		D6E470A0C684D4FBC08BDF7A28A2A38B /* ActionSheetPicker-3.0 */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "ActionSheetPicker-3.0"; path = ActionSheetPicker_3_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA7BF467060F6EF62EACBCA98635C04E /* Pods-AHF Remote-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AHF Remote-frameworks.sh"; sourceTree = "<group>"; };
+		DAC9C86C43AE8FDE9C3CB1F87E82C3B8 /* Pods-AHF Remote-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AHF Remote-Info.plist"; sourceTree = "<group>"; };
+		DB1A5BA3E8C66751A3D5ADE8FCB05617 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Malert/Classes/Util/Extensions.swift; sourceTree = "<group>"; };
+		DE0B6376C2D00248032E64C23E748F80 /* MalertButtonView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MalertButtonView.swift; path = Malert/Classes/MalertButtonView/MalertButtonView.swift; sourceTree = "<group>"; };
+		DEB57E4A904BCEB5C5A41A5CF8E57B87 /* Malert_brand.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Malert_brand.png; path = Malert/Assets/Malert_brand.png; sourceTree = "<group>"; };
+		DFB8C8022515AD9C206745C79AEF44AB /* ActionSheetPicker-3.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ActionSheetPicker-3.0-dummy.m"; sourceTree = "<group>"; };
+		E855C3AF75AA6C9CC9BFC3CA8840D7C1 /* DeviceKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DeviceKit-Info.plist"; sourceTree = "<group>"; };
+		EC7A891D6A84B99F8654BF7E203F5345 /* Pods-AHF Remote-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AHF Remote-acknowledgements.markdown"; sourceTree = "<group>"; };
+		ED41FDCEFC974BE495839A4468E8587D /* Malert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Malert-umbrella.h"; sourceTree = "<group>"; };
+		EE4D737948554254D79C92EFAE256D90 /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetLocalePicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetLocalePicker.m; sourceTree = "<group>"; };
+		EEAE99CB64907C7226FE2B20D3AB0596 /* MalertPresentationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MalertPresentationManager.swift; path = Malert/Classes/Animations/MalertPresentationManager.swift; sourceTree = "<group>"; };
+		F012ACC67173F0B86D1960EFDA809D60 /* ActionSheetPicker-3.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-3.0-prefix.pch"; sourceTree = "<group>"; };
+		F267B43251CE5123AF6AF71028016A77 /* Malert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Malert.debug.xcconfig; sourceTree = "<group>"; };
+		F28C8C8686050BCF62BFE58E40C38605 /* DeviceKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeviceKit-umbrella.h"; sourceTree = "<group>"; };
+		F39564A232D2340C1C58A17907342A42 /* ActionSheetPicker-3.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "ActionSheetPicker-3.0.modulemap"; sourceTree = "<group>"; };
+		F5565FE341628BD0E5DFF1459DBA9ED5 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDistancePicker.m; path = CoreActionSheetPicker/CoreActionSheetPicker/Pickers/ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		FB3EC2BA8F37DC99BA832EE2E8E89D17 /* KDCircularProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KDCircularProgress.modulemap; sourceTree = "<group>"; };
+		FBAEBF757BFB1EABBF34B990E0CC40FD /* Pods-AHF Remote-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AHF Remote-dummy.m"; sourceTree = "<group>"; };
+		FCB6B1879B6BB6035D89A178371B1768 /* Pods-AHF Remote-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AHF Remote-acknowledgements.plist"; sourceTree = "<group>"; };
+		FF00E956A80A02129991DD3945777172 /* Malert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Malert.swift; path = Malert/Classes/Malert/Malert.swift; sourceTree = "<group>"; };
+		FFDC470E35EB2888A7B650F14B2FB8BA /* KDCircularProgress */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KDCircularProgress; path = KDCircularProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0DC88C0BA3749DA0167F25113535B4E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				786A144830D1325D620C1F87AAB144E4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65110E3C746354AA8BFA0BA13581159D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F89D06BFB92779FBCCB17287AFC55AE /* Accelerate.framework in Frameworks */,
+				46EDB1BAE65CDE33C020B8F4B0163343 /* Foundation.framework in Frameworks */,
+				6D4502CC7407FB85774DAF2ADE7E867C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C616238525BCC61AE0C0C4690227BE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E909EB12C1EAC4BA141FB502654D49B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A85722B4F5A9252D42BC3E32E323AD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BBDAE80B2577F2F7312A6EC1FA23A30 /* Foundation.framework in Frameworks */,
+				558986D0D52FC340DE534D4F38CA8D3B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC19C499E0F83966AEE0DFF84CF824C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5C6FE3A2810096C31DF36EC400D36F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21B111A777BA2A29F6041F8A7C4CA60C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAF500B453CAAFAD0724799CDA2E093B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF0197F8F4D8AF4785516AD496786ED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C49DCB435CE913A16B5CCE625F27BE6 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		344B897A8F4100CF7F74973C2081CC3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6E470A0C684D4FBC08BDF7A28A2A38B /* ActionSheetPicker-3.0 */,
+				190D7383CCEFD8AB3F8CB93098A3F214 /* DeviceKit */,
+				86C4A2D817E6CFFF31BF75161625FD5D /* DynamicBlurView */,
+				FFDC470E35EB2888A7B650F14B2FB8BA /* KDCircularProgress */,
+				94A65CAC8215F06D8A13AB4F409CB8ED /* Malert */,
+				B931259D0FFAF5FE5E51413E8C03910C /* Malert-Malert */,
+				3DC694B59657E4DA91A7549A08516FBA /* Pods-AHF Remote */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52130FC2DBD590A7EE873185937D045A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				986013F6D145800DA92D3473C519EBD0 /* DeviceKit.modulemap */,
+				A1406587A65D3BEFB6D58A3D7E59047A /* DeviceKit-dummy.m */,
+				E855C3AF75AA6C9CC9BFC3CA8840D7C1 /* DeviceKit-Info.plist */,
+				5B9D7FD140521A3F641EAD84C1EDE1E6 /* DeviceKit-prefix.pch */,
+				F28C8C8686050BCF62BFE58E40C38605 /* DeviceKit-umbrella.h */,
+				26A68EC205310D421BBFF4FBCBCE0E7A /* DeviceKit.debug.xcconfig */,
+				2EB20503508CC91EF92E2777C51A3EFC /* DeviceKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DeviceKit";
+			sourceTree = "<group>";
+		};
+		5C49DCB435CE913A16B5CCE625F27BE6 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				14BDA8230569BF877C4DA19761A70ED7 /* Accelerate.framework */,
+				3FA0B378BCC9D218E8774A30345D6D0D /* Foundation.framework */,
+				2E2BFE71ADE37C5C6F70A845F3DA5480 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6EB89BB9319FC8C600717311A1AF2D84 /* DynamicBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				1508B861923F250EAD54DEF6E0F35257 /* BlurLayer.swift */,
+				10CC43A72C7CBD3F891502D5E1A32C04 /* CALayer+Conversion.swift */,
+				7A82ED001631EB3E9BBA70EA95FAB496 /* CaptureQuality.swift */,
+				0B0F6B7769C4C8C436430F652B5E8F50 /* CGContext+CGImage.swift */,
+				0D42E12A014FEB9AC501D36F85B4E6CF /* CGImage+Accelerate.swift */,
+				BA8F6BC3BD386B4730E8973B823270D9 /* CGRect+Conversion.swift */,
+				9E75A28BC6926ED2405C0BF1E195E784 /* DynamicBlurView.h */,
+				A0151EF0E05730023444E0B10E2D725C /* DynamicBlurView.swift */,
+				D50ACF5D7B06DB06DA578162938B639C /* TrackingMode.swift */,
+				2D960094411749778ACBC03B487FE4C1 /* UIImage+Blur.swift */,
+				A9B385B2EAA9D95DF62E5AD114BE2942 /* Support Files */,
+			);
+			name = DynamicBlurView;
+			path = DynamicBlurView;
+			sourceTree = "<group>";
+		};
+		87CD698142BA42ED05D24861DAF36414 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DEB57E4A904BCEB5C5A41A5CF8E57B87 /* Malert_brand.png */,
+				43F24061A91435201ACDB0A578C1BA06 /* mockup.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9198FE0B3388A623432979C0B7AE2826 /* DeviceKit */ = {
+			isa = PBXGroup;
+			children = (
+				18C20EE88A7A856BA9697364ABAD5105 /* Device.generated.swift */,
+				52130FC2DBD590A7EE873185937D045A /* Support Files */,
+			);
+			name = DeviceKit;
+			path = DeviceKit;
+			sourceTree = "<group>";
+		};
+		A5E1E7AA1B48FD270458A917EDAF8EB8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA8BF6C7F3FF1C2CAAAE2D7946C0BC /* Pods-AHF Remote */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A5F58E19C46A0F992AB83C0811B94C8F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F39564A232D2340C1C58A17907342A42 /* ActionSheetPicker-3.0.modulemap */,
+				DFB8C8022515AD9C206745C79AEF44AB /* ActionSheetPicker-3.0-dummy.m */,
+				114184EA8AA32CB7395A923570993CD6 /* ActionSheetPicker-3.0-Info.plist */,
+				F012ACC67173F0B86D1960EFDA809D60 /* ActionSheetPicker-3.0-prefix.pch */,
+				6E7E05A1FEC680DA9CE07572CCFBAD9F /* ActionSheetPicker-3.0-umbrella.h */,
+				BBE70F576FDE5020256B47858918AE65 /* ActionSheetPicker-3.0.debug.xcconfig */,
+				092EE22F20AE667CEF2358EF3F41B31A /* ActionSheetPicker-3.0.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ActionSheetPicker-3.0";
+			sourceTree = "<group>";
+		};
+		A9B385B2EAA9D95DF62E5AD114BE2942 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3514C3015AF1F42E0F81F68CA1F02262 /* DynamicBlurView.modulemap */,
+				94E690C1F6BA3204AE3A04755CB2C1A3 /* DynamicBlurView-dummy.m */,
+				4FB8C06F33F490BB1C3FC50F2AB11893 /* DynamicBlurView-Info.plist */,
+				3B8C08382EEF77515495E2DC426D51E2 /* DynamicBlurView-prefix.pch */,
+				89AB193104FC30BA7EFCA6DA1EE9656A /* DynamicBlurView-umbrella.h */,
+				54E5F27D20311E7104446CF2841055A9 /* DynamicBlurView.debug.xcconfig */,
+				AE5DB15E0958CA1F83B70D7CF228011D /* DynamicBlurView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DynamicBlurView";
+			sourceTree = "<group>";
+		};
+		ADB7EB3402FA1BD7EA4A01CAD97EF6FC /* Malert */ = {
+			isa = PBXGroup;
+			children = (
+				C826D6C696D06BB862EC10A0D5B44235 /* BaseMalertViewController.swift */,
+				4B39B9FE772CCE23F82F75DEABDF04BB /* BaseTransitioning.swift */,
+				DB1A5BA3E8C66751A3D5ADE8FCB05617 /* Extensions.swift */,
+				FF00E956A80A02129991DD3945777172 /* Malert.swift */,
+				89135DFB687D6B1AE8BF704F40240B34 /* Malert+Actions.swift */,
+				B5764068640636FAA28C47F02104E66A /* Malert+Constraints.swift */,
+				B439BA4432BD99329FD5C6C1E9B75968 /* MalertAction.swift */,
+				DE0B6376C2D00248032E64C23E748F80 /* MalertButtonView.swift */,
+				3BAAB2F41DDCA1629285BC64F3611E71 /* MalertDimissTransitioning.swift */,
+				C106668FD00F01785847B34EB747D6EE /* MalertInteractiveTransition.swift */,
+				EEAE99CB64907C7226FE2B20D3AB0596 /* MalertPresentationManager.swift */,
+				763D52C8C6A3C4EA74F5683258929B8D /* MalertPresentTransitioning.swift */,
+				BF918EF6D280822FEB7652BD74D96EE9 /* MalertView.swift */,
+				87CD698142BA42ED05D24861DAF36414 /* Resources */,
+				DE4C5DDA07F03B6B7FD47823C0794E34 /* Support Files */,
+			);
+			name = Malert;
+			path = Malert;
+			sourceTree = "<group>";
+		};
+		AEF442DC625A3295777247677F19BA65 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB3EC2BA8F37DC99BA832EE2E8E89D17 /* KDCircularProgress.modulemap */,
+				31250644DB1CA0034CAA8AF0119ED870 /* KDCircularProgress-dummy.m */,
+				9EE7B1126EDC002AF8EA9CD0CE8B47FD /* KDCircularProgress-Info.plist */,
+				028A5900914375F66C3C6FB39DBEB2E6 /* KDCircularProgress-prefix.pch */,
+				43DF410EB25521275D57AD62FFC87449 /* KDCircularProgress-umbrella.h */,
+				31A86CAF01C71F3CA995E31075D812C3 /* KDCircularProgress.debug.xcconfig */,
+				A735E6D02FF86D15757003D5DC39029A /* KDCircularProgress.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KDCircularProgress";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				DB9CE7AC38CEDF218E72C66C42CE4AA6 /* Pods */,
+				344B897A8F4100CF7F74973C2081CC3D /* Products */,
+				A5E1E7AA1B48FD270458A917EDAF8EB8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D00FFF22F77662BFB98CD676FE3B14C1 /* ActionSheetPicker-3.0 */ = {
+			isa = PBXGroup;
+			children = (
+				72392EEA3C2A7CCFC7D33BD5DE5B0887 /* AbstractActionSheetPicker.h */,
+				6775DE254726A7FC36C1225EC2CFFBC5 /* AbstractActionSheetPicker.m */,
+				59ECC50D01D99320DADDDD4AFF3541F3 /* ActionSheetCustomPicker.h */,
+				298738AD5FE98E47AC2D46EB22C38EA6 /* ActionSheetCustomPicker.m */,
+				C00B5942A14F94BB44B1CE1AE6F46EFF /* ActionSheetCustomPickerDelegate.h */,
+				A95B634765BF1ED6A192CE2A08360256 /* ActionSheetDatePicker.h */,
+				7942F9EE81C5770DD26C3234E5F21235 /* ActionSheetDatePicker.m */,
+				1FF68FE43E498669CEC3A5B296F8D768 /* ActionSheetDistancePicker.h */,
+				F5565FE341628BD0E5DFF1459DBA9ED5 /* ActionSheetDistancePicker.m */,
+				1E07C7CCCAEA450C0121FEE2A8E25F93 /* ActionSheetLocalePicker.h */,
+				EE4D737948554254D79C92EFAE256D90 /* ActionSheetLocalePicker.m */,
+				61EAC0BDD081C861B1B7491A385BD77E /* ActionSheetMultipleStringPicker.h */,
+				44D985D2D3F641E734E7AEBE3FDE437A /* ActionSheetMultipleStringPicker.m */,
+				6DFE60C74BF0D136C484B4415166D32A /* ActionSheetPicker.h */,
+				5E9A5BA81641EF43D5AB4BDB0F405B2A /* ActionSheetStringPicker.h */,
+				027A2094A9FA92F3C6AF93E4D5AF44DD /* ActionSheetStringPicker.m */,
+				AF87A12065890AB5702B17F453FB1F35 /* DistancePickerView.h */,
+				35CB1643DDAEE35755D827F23A607C38 /* DistancePickerView.m */,
+				D36801610F3DF1154CFE38DF69D696B5 /* SWActionSheet.h */,
+				55AACAE2B1F294F8FFEF57AC4D7E5963 /* SWActionSheet.m */,
+				A5F58E19C46A0F992AB83C0811B94C8F /* Support Files */,
+			);
+			name = "ActionSheetPicker-3.0";
+			path = "ActionSheetPicker-3.0";
+			sourceTree = "<group>";
+		};
+		DB9CE7AC38CEDF218E72C66C42CE4AA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D00FFF22F77662BFB98CD676FE3B14C1 /* ActionSheetPicker-3.0 */,
+				9198FE0B3388A623432979C0B7AE2826 /* DeviceKit */,
+				6EB89BB9319FC8C600717311A1AF2D84 /* DynamicBlurView */,
+				E51DB79638E5D8333D51F939F66067A5 /* KDCircularProgress */,
+				ADB7EB3402FA1BD7EA4A01CAD97EF6FC /* Malert */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DE4C5DDA07F03B6B7FD47823C0794E34 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				367F08ADCF4FD36964C5738C360B4BAE /* Malert.modulemap */,
+				2C1CF8FCC8EB9E0C2DDF4CAC1B407AC6 /* Malert-dummy.m */,
+				11B5EB5C99503242C577435305886813 /* Malert-Info.plist */,
+				27CA7C40C402C1160FE323955AB078D1 /* Malert-prefix.pch */,
+				ED41FDCEFC974BE495839A4468E8587D /* Malert-umbrella.h */,
+				F267B43251CE5123AF6AF71028016A77 /* Malert.debug.xcconfig */,
+				BE06C63A6161B0D673C8FD4952CC0E4F /* Malert.release.xcconfig */,
+				A2276731E479DBF239004A51B463CAD2 /* ResourceBundle-Malert-Malert-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Malert";
+			sourceTree = "<group>";
+		};
+		E51DB79638E5D8333D51F939F66067A5 /* KDCircularProgress */ = {
+			isa = PBXGroup;
+			children = (
+				0D9D75BBFD23D8139EAB16439A0F65FA /* KDCircularProgress.swift */,
+				AEF442DC625A3295777247677F19BA65 /* Support Files */,
+			);
+			name = KDCircularProgress;
+			path = KDCircularProgress;
+			sourceTree = "<group>";
+		};
+		FDCA8BF6C7F3FF1C2CAAAE2D7946C0BC /* Pods-AHF Remote */ = {
+			isa = PBXGroup;
+			children = (
+				1BE6CA08F0C975450B585363C07F072D /* Pods-AHF Remote.modulemap */,
+				EC7A891D6A84B99F8654BF7E203F5345 /* Pods-AHF Remote-acknowledgements.markdown */,
+				FCB6B1879B6BB6035D89A178371B1768 /* Pods-AHF Remote-acknowledgements.plist */,
+				FBAEBF757BFB1EABBF34B990E0CC40FD /* Pods-AHF Remote-dummy.m */,
+				DA7BF467060F6EF62EACBCA98635C04E /* Pods-AHF Remote-frameworks.sh */,
+				DAC9C86C43AE8FDE9C3CB1F87E82C3B8 /* Pods-AHF Remote-Info.plist */,
+				C9C172832D853B99F90190E0D7561BEF /* Pods-AHF Remote-umbrella.h */,
+				45DC009AF8113C1B837AD5174AE2F95E /* Pods-AHF Remote.debug.xcconfig */,
+				8C015C45342F9E16F58B6A3899F3195A /* Pods-AHF Remote.release.xcconfig */,
+			);
+			name = "Pods-AHF Remote";
+			path = "Target Support Files/Pods-AHF Remote";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		36ED68D1C4A2DA2199C96D58AF53CC76 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2F54FD222DB9213AC3843DACFA95759 /* Pods-AHF Remote-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48D2850F036A810DF01C825FE903C636 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2A4B9698B2D4AFF38D5184BE0CA9C3D /* AbstractActionSheetPicker.h in Headers */,
+				B779C5D0133D2074CB2EDAC61C4C5475 /* ActionSheetCustomPicker.h in Headers */,
+				3FB00B6187FADACF9F2E2463C6CB37D3 /* ActionSheetCustomPickerDelegate.h in Headers */,
+				5ED8F5A7087CB6ABC1D1261752BA4D77 /* ActionSheetDatePicker.h in Headers */,
+				CD151B24C25809170DECD96AA3F2989E /* ActionSheetDistancePicker.h in Headers */,
+				3E20ACBD443C2D7BBF17DBE83CBC521F /* ActionSheetLocalePicker.h in Headers */,
+				EEC7477ABC2DC5D98E61613141784919 /* ActionSheetMultipleStringPicker.h in Headers */,
+				BC92DAA5EA59849601A1080AA7671D4E /* ActionSheetPicker.h in Headers */,
+				30B9706BE643B5F0A0530D55403692A2 /* ActionSheetPicker-3.0-umbrella.h in Headers */,
+				9D59535CF4F4C867E488363A17D18809 /* ActionSheetStringPicker.h in Headers */,
+				0091E4134A0D7F54CCE654E1EFB490BE /* DistancePickerView.h in Headers */,
+				4007288570A129B4E922875A51663243 /* SWActionSheet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70A154A6FBF9FFD44F23E1074A2BECF7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7CE548A50A2A37EFAB9696A45B6F460 /* DynamicBlurView.h in Headers */,
+				25D1324929C7409F04FCC03265F88711 /* DynamicBlurView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B838E331D1396EFC8D5CC1127EB00A4D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E147BB0D0FEFA800108456FC0F9F0097 /* KDCircularProgress-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B869F45523B08C188EC6722E1DD8C363 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE419A0EB119A1B529D3E851011B031C /* DeviceKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA287307F52CEBC3D300C49C7EF71DCD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF358DE7F5E5B27145A0F7B09D4D8C1F /* Malert-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4CDD1C6C8885D07092D8EA708AAC0E53 /* DeviceKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE2416AB9D0716DFAC4C6C724B0E6744 /* Build configuration list for PBXNativeTarget "DeviceKit" */;
+			buildPhases = (
+				B869F45523B08C188EC6722E1DD8C363 /* Headers */,
+				B024EDE69B3C51D739853194CE746FE4 /* Sources */,
+				6C616238525BCC61AE0C0C4690227BE1 /* Frameworks */,
+				8EE6FBD90231B8B4128EE874B295E36F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeviceKit;
+			productName = DeviceKit;
+			productReference = 190D7383CCEFD8AB3F8CB93098A3F214 /* DeviceKit */;
+			productType = "com.apple.product-type.framework";
+		};
+		7D914FA2F03C860D5133BA2DB87C594A /* DynamicBlurView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8021EF0FA98E679C97136A02ADCA80AB /* Build configuration list for PBXNativeTarget "DynamicBlurView" */;
+			buildPhases = (
+				70A154A6FBF9FFD44F23E1074A2BECF7 /* Headers */,
+				9FA37CBDE6D781B2EEE81AF1F5852C85 /* Sources */,
+				65110E3C746354AA8BFA0BA13581159D /* Frameworks */,
+				E2FC7424850468A2964D2DA6F4245B51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamicBlurView;
+			productName = DynamicBlurView;
+			productReference = 86C4A2D817E6CFFF31BF75161625FD5D /* DynamicBlurView */;
+			productType = "com.apple.product-type.framework";
+		};
+		89DA986C9F5114664B5A9CCD72824533 /* Pods-AHF Remote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D6E076AD28E10695423964CE363ED77 /* Build configuration list for PBXNativeTarget "Pods-AHF Remote" */;
+			buildPhases = (
+				36ED68D1C4A2DA2199C96D58AF53CC76 /* Headers */,
+				2B54430E258EF456D8CC8B7614E69CB0 /* Sources */,
+				EAF500B453CAAFAD0724799CDA2E093B /* Frameworks */,
+				06AC15E1D345C4E9C013479943C4D5A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8F749CADFEA0B536C170F4A59889271 /* PBXTargetDependency */,
+				76D1A838B35A76C575FEBD2B75D7F30E /* PBXTargetDependency */,
+				905A3205A218E21D2715A8FE915BCE04 /* PBXTargetDependency */,
+				3A54504CD12BCA1DC993D23AD17840E5 /* PBXTargetDependency */,
+				4DAF52F5FF505531AE71611483FDAFD5 /* PBXTargetDependency */,
+			);
+			name = "Pods-AHF Remote";
+			productName = Pods_AHF_Remote;
+			productReference = 3DC694B59657E4DA91A7549A08516FBA /* Pods-AHF Remote */;
+			productType = "com.apple.product-type.framework";
+		};
+		9A90A4C95F6872F771B717319EABD30D /* KDCircularProgress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84DEE5F7A42C062182C997E9BADE6059 /* Build configuration list for PBXNativeTarget "KDCircularProgress" */;
+			buildPhases = (
+				B838E331D1396EFC8D5CC1127EB00A4D /* Headers */,
+				FA523B5BDF06D16510E79C8D76F6DBF9 /* Sources */,
+				0DC88C0BA3749DA0167F25113535B4E6 /* Frameworks */,
+				082816B0F1929C7F5EB662A813878D89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KDCircularProgress;
+			productName = KDCircularProgress;
+			productReference = FFDC470E35EB2888A7B650F14B2FB8BA /* KDCircularProgress */;
+			productType = "com.apple.product-type.framework";
+		};
+		A43B25DDF20FCB9228471F8F5135C866 /* ActionSheetPicker-3.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FBF9BBED697A2764595F2142D34D41F /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */;
+			buildPhases = (
+				48D2850F036A810DF01C825FE903C636 /* Headers */,
+				C74DCAEAF34FC5664FB6FD94177C9C7E /* Sources */,
+				9A85722B4F5A9252D42BC3E32E323AD1 /* Frameworks */,
+				58779D47E99CA83011BFDB38494E747A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ActionSheetPicker-3.0";
+			productName = ActionSheetPicker_3_0;
+			productReference = D6E470A0C684D4FBC08BDF7A28A2A38B /* ActionSheetPicker-3.0 */;
+			productType = "com.apple.product-type.framework";
+		};
+		B117881115A50B47906E45574440276A /* Malert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0DDA366134FF707391E4DF81976ED24 /* Build configuration list for PBXNativeTarget "Malert" */;
+			buildPhases = (
+				DA287307F52CEBC3D300C49C7EF71DCD /* Headers */,
+				A865AFB35B271847BB598A29CCCA393C /* Sources */,
+				B5C6FE3A2810096C31DF36EC400D36F3 /* Frameworks */,
+				54B9E7D8E04223D15BDCF24BC3139574 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8978A19E06EF1F6738039ACDE0B02EE1 /* PBXTargetDependency */,
+			);
+			name = Malert;
+			productName = Malert;
+			productReference = 94A65CAC8215F06D8A13AB4F409CB8ED /* Malert */;
+			productType = "com.apple.product-type.framework";
+		};
+		F062B4408517689AF1DA5F570405334C /* Malert-Malert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C342AF5B21F7C1E27FA676C88B74FCFA /* Build configuration list for PBXNativeTarget "Malert-Malert" */;
+			buildPhases = (
+				B9E78F439A45C2B7DAE881B67A1AB9DB /* Sources */,
+				AC19C499E0F83966AEE0DFF84CF824C3 /* Frameworks */,
+				B650258F5988F18171946B410E32C4E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Malert-Malert";
+			productName = Malert;
+			productReference = B931259D0FFAF5FE5E51413E8C03910C /* Malert-Malert */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 344B897A8F4100CF7F74973C2081CC3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A43B25DDF20FCB9228471F8F5135C866 /* ActionSheetPicker-3.0 */,
+				4CDD1C6C8885D07092D8EA708AAC0E53 /* DeviceKit */,
+				7D914FA2F03C860D5133BA2DB87C594A /* DynamicBlurView */,
+				9A90A4C95F6872F771B717319EABD30D /* KDCircularProgress */,
+				B117881115A50B47906E45574440276A /* Malert */,
+				F062B4408517689AF1DA5F570405334C /* Malert-Malert */,
+				89DA986C9F5114664B5A9CCD72824533 /* Pods-AHF Remote */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06AC15E1D345C4E9C013479943C4D5A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		082816B0F1929C7F5EB662A813878D89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54B9E7D8E04223D15BDCF24BC3139574 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8539B5E5F6833C748700B1909DD1FE18 /* Malert-Malert in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58779D47E99CA83011BFDB38494E747A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EE6FBD90231B8B4128EE874B295E36F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B650258F5988F18171946B410E32C4E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36DB786F4939EB44AC945F20BE77AA45 /* Malert_brand.png in Resources */,
+				BADFD2F6E2EA50790310407AB413FCCE /* mockup.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2FC7424850468A2964D2DA6F4245B51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B54430E258EF456D8CC8B7614E69CB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63F4C5BF08315A8146FD3FDD1392A22A /* Pods-AHF Remote-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FA37CBDE6D781B2EEE81AF1F5852C85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				966D55A9CA952E2ECE1CFA25582235E4 /* BlurLayer.swift in Sources */,
+				264E80CBBA0EE5E4FA993BB19893405C /* CALayer+Conversion.swift in Sources */,
+				B8F1699C2BC872224BF0085B2F0DADF5 /* CaptureQuality.swift in Sources */,
+				3EFFEA8D07C797B48D4F9BB818FF1150 /* CGContext+CGImage.swift in Sources */,
+				A0DF5A3CB4295468A86691F1269C83AD /* CGImage+Accelerate.swift in Sources */,
+				35C8BEBD5E0F43C9178D6D187992DC1D /* CGRect+Conversion.swift in Sources */,
+				B0CCF957D8FF4C63088AE113E49C5433 /* DynamicBlurView.swift in Sources */,
+				BB92BC420CB7C28DAC4C0DAF10F31E61 /* DynamicBlurView-dummy.m in Sources */,
+				9694CD5A237554B90A9D0DA56F3C8536 /* TrackingMode.swift in Sources */,
+				F3E19AB6556EBD2BA6DD2104CEA1366E /* UIImage+Blur.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A865AFB35B271847BB598A29CCCA393C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77117CD475B780B9D5B268747E68C8DD /* BaseMalertViewController.swift in Sources */,
+				20C10986D19FDED21105A0AFE027BD12 /* BaseTransitioning.swift in Sources */,
+				5FD41A917CA8463F698402B613E9E952 /* Extensions.swift in Sources */,
+				F94192A7DCCC8FFB97B1C0D6E0D2CCEF /* Malert.swift in Sources */,
+				19CC2D4DCD2CA55D48957550E806BD78 /* Malert+Actions.swift in Sources */,
+				AEAD72B333D50BDF181D1D030FAAF94E /* Malert+Constraints.swift in Sources */,
+				C1627F12A88C27FFAFD654C54482B48F /* Malert-dummy.m in Sources */,
+				FA2401E836C2E0B755D56D0D91B098E1 /* MalertAction.swift in Sources */,
+				1BF47E1077E08534F5763BCD7FDF8149 /* MalertButtonView.swift in Sources */,
+				EBAADEA906B697C89AAA135E9B5DA33F /* MalertDimissTransitioning.swift in Sources */,
+				6C0E1FE320877F5995BCC774C66DBF24 /* MalertInteractiveTransition.swift in Sources */,
+				76DFBADB0A35F5B48FC5BA2A9C17E70D /* MalertPresentationManager.swift in Sources */,
+				9140338ECC3064BD1EE320D8E98C0EBF /* MalertPresentTransitioning.swift in Sources */,
+				788A5D4A711063C633AB8283697CB882 /* MalertView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B024EDE69B3C51D739853194CE746FE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5C71141A72424BC3711B53BB4726744 /* Device.generated.swift in Sources */,
+				44FDC841C20165E2DE68E31737A401DC /* DeviceKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9E78F439A45C2B7DAE881B67A1AB9DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C74DCAEAF34FC5664FB6FD94177C9C7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12FA8AB2ACBB820E7EC413726F9D56BC /* AbstractActionSheetPicker.m in Sources */,
+				B3556BB6B3BE4910C609C54B2FAC9772 /* ActionSheetCustomPicker.m in Sources */,
+				50EDFC88D8E5515FEA35B2CD43715CAA /* ActionSheetDatePicker.m in Sources */,
+				6AE7C13634E07A7D4DAD613EA245A470 /* ActionSheetDistancePicker.m in Sources */,
+				EE783D3B9E15DFFD23C61D2C552B49EA /* ActionSheetLocalePicker.m in Sources */,
+				F4D2ADA7E1DAB3AB844FCF231E0D72E5 /* ActionSheetMultipleStringPicker.m in Sources */,
+				0FC023279EE129DB7826EC92B6810C8D /* ActionSheetPicker-3.0-dummy.m in Sources */,
+				19767DBA2980A1DF8DD78E2CC681C627 /* ActionSheetStringPicker.m in Sources */,
+				DC2C88E51CAEEEDC1DA6147971764C60 /* DistancePickerView.m in Sources */,
+				3228EF9BB4197B00304ACEBEC57BDA5E /* SWActionSheet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA523B5BDF06D16510E79C8D76F6DBF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				216B7611B7E9C5B887CCF5CB130C1EF2 /* KDCircularProgress.swift in Sources */,
+				D51D1DC50058F86C0300F1AB723ACCD0 /* KDCircularProgress-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A54504CD12BCA1DC993D23AD17840E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KDCircularProgress;
+			target = 9A90A4C95F6872F771B717319EABD30D /* KDCircularProgress */;
+			targetProxy = E750A8AB83784AF9DE09B78885D02943 /* PBXContainerItemProxy */;
+		};
+		4DAF52F5FF505531AE71611483FDAFD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Malert;
+			target = B117881115A50B47906E45574440276A /* Malert */;
+			targetProxy = 7FC84D8AD10F05F8002BA8CB95FDC4F2 /* PBXContainerItemProxy */;
+		};
+		76D1A838B35A76C575FEBD2B75D7F30E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DeviceKit;
+			target = 4CDD1C6C8885D07092D8EA708AAC0E53 /* DeviceKit */;
+			targetProxy = 615743D81E968F2B47FA27CD7C3713B7 /* PBXContainerItemProxy */;
+		};
+		8978A19E06EF1F6738039ACDE0B02EE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Malert-Malert";
+			target = F062B4408517689AF1DA5F570405334C /* Malert-Malert */;
+			targetProxy = C88F18C1E5D5301C5DA8DF365F54E5C5 /* PBXContainerItemProxy */;
+		};
+		905A3205A218E21D2715A8FE915BCE04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DynamicBlurView;
+			target = 7D914FA2F03C860D5133BA2DB87C594A /* DynamicBlurView */;
+			targetProxy = EAE00C70FA0596EC0CA602291D8DAB64 /* PBXContainerItemProxy */;
+		};
+		E8F749CADFEA0B536C170F4A59889271 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ActionSheetPicker-3.0";
+			target = A43B25DDF20FCB9228471F8F5135C866 /* ActionSheetPicker-3.0 */;
+			targetProxy = D34F75F10C5E143127CE3FB7C9BA72A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02F688A3D9942E74336859F4096310A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F267B43251CE5123AF6AF71028016A77 /* Malert.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Malert/Malert-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Malert/Malert-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Malert/Malert.modulemap";
+				PRODUCT_MODULE_NAME = Malert;
+				PRODUCT_NAME = Malert;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2DE15074050361C271BA4AF8F3492ECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26A68EC205310D421BBFF4FBCBCE0E7A /* DeviceKit.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DeviceKit/DeviceKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DeviceKit/DeviceKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DeviceKit/DeviceKit.modulemap";
+				PRODUCT_MODULE_NAME = DeviceKit;
+				PRODUCT_NAME = DeviceKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		375CF99F7A90DBABDD327571C7A36A5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31A86CAF01C71F3CA995E31075D812C3 /* KDCircularProgress.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KDCircularProgress/KDCircularProgress-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KDCircularProgress/KDCircularProgress-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KDCircularProgress/KDCircularProgress.modulemap";
+				PRODUCT_MODULE_NAME = KDCircularProgress;
+				PRODUCT_NAME = KDCircularProgress;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		48FE85341F7A3452BDE2FB44B0AE27CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE06C63A6161B0D673C8FD4952CC0E4F /* Malert.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Malert/Malert-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Malert/Malert-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Malert/Malert.modulemap";
+				PRODUCT_MODULE_NAME = Malert;
+				PRODUCT_NAME = Malert;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		54563AE4B88898D0AA5E99F84A58CFB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE06C63A6161B0D673C8FD4952CC0E4F /* Malert.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Malert";
+				IBSC_MODULE = Malert;
+				INFOPLIST_FILE = "Target Support Files/Malert/ResourceBundle-Malert-Malert-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = Malert;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		56AC7335090B7ACEECAB3EA279214F7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EB20503508CC91EF92E2777C51A3EFC /* DeviceKit.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DeviceKit/DeviceKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DeviceKit/DeviceKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DeviceKit/DeviceKit.modulemap";
+				PRODUCT_MODULE_NAME = DeviceKit;
+				PRODUCT_NAME = DeviceKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7E3DEAF17145EA2C2FA72E4CBD5A510D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45DC009AF8113C1B837AD5174AE2F95E /* Pods-AHF Remote.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AHF Remote/Pods-AHF Remote-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AHF Remote/Pods-AHF Remote.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9790C8987900FFA7B022659DF25385D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 092EE22F20AE667CEF2358EF3F41B31A /* ActionSheetPicker-3.0.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0.modulemap";
+				PRODUCT_MODULE_NAME = ActionSheetPicker_3_0;
+				PRODUCT_NAME = ActionSheetPicker_3_0;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9E295EBCA2FEC414DDDC784316E0F166 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F267B43251CE5123AF6AF71028016A77 /* Malert.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Malert";
+				IBSC_MODULE = Malert;
+				INFOPLIST_FILE = "Target Support Files/Malert/ResourceBundle-Malert-Malert-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = Malert;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		C7E144B7419D0E82F0436F903BC61CC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54E5F27D20311E7104446CF2841055A9 /* DynamicBlurView.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DynamicBlurView/DynamicBlurView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DynamicBlurView/DynamicBlurView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DynamicBlurView/DynamicBlurView.modulemap";
+				PRODUCT_MODULE_NAME = DynamicBlurView;
+				PRODUCT_NAME = DynamicBlurView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DEF24433A3C4A31761EC9BC76C60B1DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A735E6D02FF86D15757003D5DC39029A /* KDCircularProgress.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KDCircularProgress/KDCircularProgress-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KDCircularProgress/KDCircularProgress-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KDCircularProgress/KDCircularProgress.modulemap";
+				PRODUCT_MODULE_NAME = KDCircularProgress;
+				PRODUCT_NAME = KDCircularProgress;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E3208ADD21D03073A02718CBCA1BAD7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE5DB15E0958CA1F83B70D7CF228011D /* DynamicBlurView.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DynamicBlurView/DynamicBlurView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DynamicBlurView/DynamicBlurView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DynamicBlurView/DynamicBlurView.modulemap";
+				PRODUCT_MODULE_NAME = DynamicBlurView;
+				PRODUCT_NAME = DynamicBlurView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F38ADA8C72DE9FB934F7B20DDB72F79C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBE70F576FDE5020256B47858918AE65 /* ActionSheetPicker-3.0.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ActionSheetPicker-3.0/ActionSheetPicker-3.0.modulemap";
+				PRODUCT_MODULE_NAME = ActionSheetPicker_3_0;
+				PRODUCT_NAME = ActionSheetPicker_3_0;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F86A287BF74AF7F8BECAA57572A02452 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C015C45342F9E16F58B6A3899F3195A /* Pods-AHF Remote.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AHF Remote/Pods-AHF Remote-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AHF Remote/Pods-AHF Remote.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FBF9BBED697A2764595F2142D34D41F /* Build configuration list for PBXNativeTarget "ActionSheetPicker-3.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F38ADA8C72DE9FB934F7B20DDB72F79C /* Debug */,
+				9790C8987900FFA7B022659DF25385D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8021EF0FA98E679C97136A02ADCA80AB /* Build configuration list for PBXNativeTarget "DynamicBlurView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7E144B7419D0E82F0436F903BC61CC4 /* Debug */,
+				E3208ADD21D03073A02718CBCA1BAD7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84DEE5F7A42C062182C997E9BADE6059 /* Build configuration list for PBXNativeTarget "KDCircularProgress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				375CF99F7A90DBABDD327571C7A36A5E /* Debug */,
+				DEF24433A3C4A31761EC9BC76C60B1DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D6E076AD28E10695423964CE363ED77 /* Build configuration list for PBXNativeTarget "Pods-AHF Remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E3DEAF17145EA2C2FA72E4CBD5A510D /* Debug */,
+				F86A287BF74AF7F8BECAA57572A02452 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0DDA366134FF707391E4DF81976ED24 /* Build configuration list for PBXNativeTarget "Malert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02F688A3D9942E74336859F4096310A4 /* Debug */,
+				48FE85341F7A3452BDE2FB44B0AE27CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C342AF5B21F7C1E27FA676C88B74FCFA /* Build configuration list for PBXNativeTarget "Malert-Malert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E295EBCA2FEC414DDDC784316E0F166 /* Debug */,
+				54563AE4B88898D0AA5E99F84A58CFB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE2416AB9D0716DFAC4C6C724B0E6744 /* Build configuration list for PBXNativeTarget "DeviceKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DE15074050361C271BA4AF8F3492ECA /* Debug */,
+				56AC7335090B7ACEECAB3EA279214F7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

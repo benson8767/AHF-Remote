@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "signal."; ObjectID = "B8b-fr-D5Z"; */
+"B8b-fr-D5Z.text" = "signal.";
+
+/* Class = "UILabel"; text = "Press buttons 1 and 3 on handset for"; ObjectID = "Ggt-Ef-VLT"; */
+"Ggt-Ef-VLT.text" = "Press buttons 1 and 3 on handset for";
+
+/* Class = "UILabel"; text = "2."; ObjectID = "LAQ-we-VeI"; */
+"LAQ-we-VeI.text" = "2.";
+
+/* Class = "UILabel"; text = "1."; ObjectID = "M14-Kc-jTG"; */
+"M14-Kc-jTG.text" = "1.";
+
+/* Class = "UILabel"; text = "Move your mobile close to TRF2 (a Bluetooth device by the bed)."; ObjectID = "fif-qd-LR8"; */
+"fif-qd-LR8.text" = "Move your mobile close to TRF2 (a Bluetooth device by the bed).";
+
+/* Class = "UILabel"; text = "Connecting"; ObjectID = "hgq-rc-OyR"; */
+"hgq-rc-OyR.text" = "Connecting";
+
+/* Class = "UILabel"; text = "to broadcast"; ObjectID = "i9C-C7-KxJ"; */
+"i9C-C7-KxJ.text" = "to broadcast";
+
+/* Class = "UIButton"; normalTitle = "CANCEL"; ObjectID = "wh1-DR-ELQ"; */
+"wh1-DR-ELQ.normalTitle" = "CANCEL";
+
+/* Class = "UILabel"; text = "3s"; ObjectID = "zX8-4p-5V9"; */
+"zX8-4p-5V9.text" = "3s";

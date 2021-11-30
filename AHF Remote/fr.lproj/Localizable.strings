@@ -1,0 +1,46 @@
+/* 
+  Localizable.strings
+  AHF Remote
+
+  Created by benson chan on 2021/11/11.
+  
+*/
+//======= setting ========
+"Settings" = "Parametrès";
+"APPLICATION" = "Application";
+"System Haptics" = "Vibrations du système";
+"Play haptics for bed control" = "Émet une vibration pour les commandes système et les interactions.";
+"SECURITY" = "Sécurité";
+"Automatic Lock After" = "Verrouillage automatique après";
+"Automatic Lock After1" = "Verrouillage auto...";
+"Unlock After Pressing" = "Déverrouillage de l'application";
+"Unlock After Pressing1" = "Déverrouillage de ...";
+"ABOUT" = "A propos";
+"Version" = "Version";
+//======= dialog ========
+"\"AHF Remote\"\nWould Need You to Allow Bluetooth Access" = "Autoriser la connexion Bluetooth avec \"AHF\U00A0Remote\"";
+"To control the bed." = "pour avoir accès aux contrôles \ndes mouvements du lit.";
+"CLOSE" = "Fermer";
+"SETTINGS" = "Réglages";
+"Disconnect from" = "Déconnexion de";
+"Will need to manually connect\nagain." = "Répétez à nouveau la procédure\n de connexion";
+"CANCEL" = "ANNULER";
+"DISCONNECT" = "DÉCONNECTER";
+"Bluetooth Connection\nLost" = "Echec de la connexion \nBluetooth";
+"Please make sure the Bluetooth\ndevice by the bed is turned on and\nin range." = "Assurez vous que le dispositif\n Bluetooth du lit est bien à \nproximité et activé";
+"TRY LATER" = "Essayer plus tard";
+"RE-CONNECT" = "Nouvelle tentative de connexion";
+"Connecting" = "Connexion";
+"Re-Connecting to" = "Nouvelle connexion à";
+"Press buttons 1 and 3 on handset for" = "Appuyer sur les boutons 1 et 3\nde la télécommande pendant";
+"3s" = "3 secondes";
+"to broadcast" = "jusqu'au signal.";
+"signal." = "signal.";
+//======= unlock ========
+"Press and hold\nLOCK KEY\nto unlock." = "Appuyer et maintenir\n pour déverrouiller";
+"Move your mobile close to TRF2 (a Bluetooth device by the bed)." = "Rapprocher votre téléphone mobile du dispositif Bluetooth relié à la télécommande.";
+//======= Toast =========
+"Device bluetooth is \nturned off." = "La connexion Bluetooth\n est désactivée.";
+"Connection failed." = "Echec de la connexion.";
+"not in range." =  "n'est pas disponible.";
+"connected." = "est connectée.";

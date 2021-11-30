@@ -1,0 +1,32 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.7.1)
+  - DeviceKit (4.5.0)
+  - DynamicBlurView (5.0.3)
+  - KDCircularProgress (1.5.4)
+  - Malert (4.2)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0
+  - DeviceKit (~> 4.0)
+  - DynamicBlurView
+  - KDCircularProgress
+  - Malert
+
+SPEC REPOS:
+  trunk:
+    - ActionSheetPicker-3.0
+    - DeviceKit
+    - DynamicBlurView
+    - KDCircularProgress
+    - Malert
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: 36da254b97a09ff89679ecb8b8510bd3e5bdc773
+  DeviceKit: b68cded46afdaefc5d2253d631d441ba7049a7fe
+  DynamicBlurView: b57e2f6aa33f85b2bcca272265162a3c7c5cc499
+  KDCircularProgress: 98200c6b8e85d22bc04eb644721d3b1e12b0686b
+  Malert: 4327c2aab8aab459824ebf647195cfb6b5cd06a4
+
+PODFILE CHECKSUM: 5d2b38df93def420d80a165b4405637f22274b1d
+
+COCOAPODS: 1.11.2
