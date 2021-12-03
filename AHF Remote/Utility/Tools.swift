@@ -20,7 +20,7 @@ class Tools:NSObject
     {
         let device = Device.current
         //var device_size = CGSize(width: device.screenRatio.width, height: device.screenRatio.height)
-        var ref_w:CGFloat = 414,ref_h:CGFloat = 818
+        var ref_w:CGFloat = 414,ref_h:CGFloat = 896//818
         var pixel_w:CGFloat = UIScreen.main.nativeBounds.width
         var pixel_h:CGFloat = UIScreen.main.nativeBounds.height
         var render:CGFloat = pixel_w / fullScreenSize.width

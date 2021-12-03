@@ -76,6 +76,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
     private var controlViewModel = ControlViewModel.sharedInstance
     private let ahfViewModel = AHFViewModel.sharedInstance
     private var ahfData: _ahfInfo = _ahfInfo()
+    private var ahfDataOrg: _ahfInfo = _ahfInfo()
     private var last_device:String = ""
     var currentDialog:CurrentDialog = .none
     let reConnectingDialogView = ReConnectingDialogView.instantiateFromNib()
@@ -88,8 +89,13 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
     var btn_timer: Timer?
     var connecting_cnt = 0
     var bt_stage:BtStage = .init_value
+    var bt_stage_org:BtStage = .init_value
     var bt_state: CBManagerState = CBManagerState.unknown
     var buttonPress = _buttonPress()
+    var buttonPressOrg = _buttonPress()
+    var buttonPressUI = _buttonPress()
+    var move_background_flag = false
+    var background_flag_timer: Timer?
     func setObserver(){
         print(tag,"setObserver")
         self.last_device = controlViewModel.get_last_device()
@@ -140,6 +146,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         controlViewModel.bt_stage.observe { (bt_stage) in
             self.bt_stage = bt_stage
             print(self.tag,"currentVC:\(currentVC),self.bt_stage:\(self.bt_stage)")
+            if self.move_background_flag {print(self.tag,"bt_stage return");return}
             if currentVC == .SettingsViewControllerNum
             {
                 if self.bt_stage == .disconnected
@@ -152,8 +159,8 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
             {
             if self.bt_state == .poweredOff
             {
-                self.view.showToast(text: "Device bluetooth is \nturned off.".localized)
                 self.alert_dialog_dismiss()
+                self.view.showToast(text: "Device bluetooth is \nturned off.".localized)
             }else
             {
                 if self.bt_stage == .disconnected
@@ -207,7 +214,269 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         controlViewModel.bt_stage.observe(listener: nil)
         controlViewModel.bt_state.observe(listener: nil)
     }
+    func testDialog(){
+        //let show_text = "\("Connection failed.".localized)\n\(self.last_device) \("not in range.".localized)"
+        //self.view.showToast(text: show_text)
+        //self.view.showToast(text: "Connection failed.".localized)
+        //self.view.showToast(text: "Device bluetooth is \nturned off.".localized)
+        //let show_text = "\(self.last_device) \("connected.".localized)"
+        //self.view.showToast(text: show_text)
+        //let show_text = "\("Connection failed.".localized)\n\(self.last_device) \("not in range.".localized)"
+        //self.view.showToast(text: show_text)
+        //allowBtAccessDialog()
+        //manualDisconnectDialog()
+        //disconnectDialog()
+        //self.last_device = ""
+        //reConnectingDialog()
+    }
+    @IBAction func backUpAction(_ sender: Any) {
+        //print("backUpAction back_up_press:\(buttonPress.back_up_press)")
+        testDialog()
+        buttonPress.back_up_press = true
+        if self.ahfData.back_lock || !self.allKeyRelease() {return}
+        ahfViewModel.execute(action: .back_up)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func backUpReleaseAction(_ sender: Any) {
+        if self.ahfData.back_lock || self.bt_stage != .function_ok {return}
+        buttonPress.back_up_press = false
+        print("backUpReleaseAction Cnt:\(chkMutliKeyPressCnt(buttonPress)),back_up_press:\(buttonPress.back_up_press)")
+        if chkMutliKeyPressCnt(buttonPress) > 0 {return}
+        ahfViewModel.execute(action: .release)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func backDownAction(_ sender: Any) {
+        //print("backDownAction back_down_press:\(buttonPress.back_down_press)")
+        buttonPress.back_down_press = true
+        if self.ahfData.back_lock || !self.allKeyRelease() {return}
+        ahfViewModel.execute(action: .back_down)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func backDownReleaseAction(_ sender: Any) {
+        if self.ahfData.back_lock || self.bt_stage != .function_ok {return}
+        buttonPress.back_down_press = false
+        print("backDownReleaseAction Cnt:\(chkMutliKeyPressCnt(buttonPress)),back_down_press:\(buttonPress.back_down_press)")
+        if chkMutliKeyPressCnt(buttonPress) > 0 {return}
+        ahfViewModel.execute(action: .release)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func legUpAction(_ sender: Any) {
+        buttonPress.leg_up_press = true
+        if self.ahfData.leg_lock || !self.allKeyRelease() {return}
+        ahfViewModel.execute(action: .leg_up)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func legUpReleaseAction(_ sender: Any) {
+        if self.ahfData.leg_lock || self.bt_stage != .function_ok {return}
+        buttonPress.leg_up_press = false
+        if chkMutliKeyPressCnt(buttonPress) > 0 {return}
+        ahfViewModel.execute(action: .release)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func legDownAction(_ sender: Any) {
+        buttonPress.leg_down_press = true
+        if self.ahfData.leg_lock || !self.allKeyRelease() {return}
+        ahfViewModel.execute(action: .leg_down)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func legDownReleaseAction(_ sender: Any) {
+        if self.ahfData.leg_lock || self.bt_stage != .function_ok {return}
+        buttonPress.leg_down_press = false
+        if chkMutliKeyPressCnt(buttonPress) > 0 {return}
+        ahfViewModel.execute(action: .release)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func backLegUpAction(_ sender: Any) {
+        buttonPress.back_leg_up_press = true
+        if self.ahfData.back_leg_lock || !self.allKeyRelease(){return}
+        ahfViewModel.execute(action: .back_leg_up)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func backLegUpReleaseAction(_ sender: Any) {
+        if self.ahfData.back_leg_lock || self.bt_stage != .function_ok {return}
+        buttonPress.back_leg_up_press = false
+        if chkMutliKeyPressCnt(buttonPress) > 0 {return}
+        ahfViewModel.execute(action: .release)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func backLegDownAction(_ sender: Any) {
+        buttonPress.back_leg_down_press = true
+        if self.ahfData.back_leg_lock || !self.allKeyRelease(){return}
+        ahfViewModel.execute(action: .back_leg_down)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func backLegDownReleaseAction(_ sender: Any) {
+        if self.ahfData.back_leg_lock || self.bt_stage != .function_ok {return}
+        buttonPress.back_leg_down_press = false
+        if chkMutliKeyPressCnt(buttonPress) > 0 {return}
+        ahfViewModel.execute(action: .release)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func hiLowUpAction(_ sender: Any) {
+        buttonPress.high_low_up_press = true
+        if self.ahfData.high_low_lock || !self.allKeyRelease() {return}
+        ahfViewModel.execute(action: .high_low_up)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func hiLowUpReleaseAction(_ sender: Any) {
+        if self.ahfData.high_low_lock || self.bt_stage != .function_ok {return}
+        buttonPress.high_low_up_press = false
+        if chkMutliKeyPressCnt(buttonPress) > 0 {return}
+        ahfViewModel.execute(action: .release)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func hiLowDownAction(_ sender: Any) {
+        buttonPress.high_low_down_press = true
+        if self.ahfData.high_low_lock || !self.allKeyRelease() {return}
+        ahfViewModel.execute(action: .high_low_down)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func hiLowDownReleaseAction(_ sender: Any) {
+        if self.ahfData.high_low_lock || self.bt_stage != .function_ok {return}
+        buttonPress.high_low_down_press = false
+        if chkMutliKeyPressCnt(buttonPress) > 0 {return}
+        ahfViewModel.execute(action: .release)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func trendUpAction(_ sender: Any) {
+        buttonPress.trend_up_press = true
+        if self.ahfData.trend_lock || !self.allKeyRelease(){return}
+        ahfViewModel.execute(action: .trend_up)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func trendUpReleaseAction(_ sender: Any) {
+        if self.ahfData.trend_lock || self.bt_stage != .function_ok {return}
+        buttonPress.trend_up_press = false
+        if chkMutliKeyPressCnt(buttonPress) > 0 {return}
+        ahfViewModel.execute(action: .release)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func trendDownAction(_ sender: Any) {
+        buttonPress.trend_down_press = true
+        if self.ahfData.trend_lock || !self.allKeyRelease() {return}
+        ahfViewModel.execute(action: .trend_down)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func trendDownReleaseAction(_ sender: Any) {
+        if self.ahfData.trend_lock || self.bt_stage != .function_ok {return}
+        buttonPress.trend_down_press = false
+        if chkMutliKeyPressCnt(buttonPress) > 0 {return}
+        ahfViewModel.execute(action: .release)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func lightAction(_ sender: Any) {
+        buttonPress.light_mode_press = true
+        if !allKeyRelease()  {return}
+        ahfViewModel.execute(action: .light_mode)
+        buttonProcess(buttonPress)
+        self.btn_timer=Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false) { [self] (ktimer) in
+            print("lightReleaseAction")
+            buttonPress.light_mode_press = false
+            if chkMutliKeyPressCnt(buttonPress) == 0
+            {
+                ahfViewModel.execute(action: .release)
+                buttonProcess(buttonPress)
+            }
+        }
+    }
+    @IBAction func lightReleaseAction(_ sender: Any) {
+        buttonPress.light_mode_press = false
+    }
+    @IBAction func nightAction(_ sender: Any) {
+        buttonPress.night_mode_press = true
+        if self.ahfData.night_lock || !self.allKeyRelease(){return}
+        ahfViewModel.execute(action: .night_mode)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func nightReleaseAction(_ sender: Any) {
+        if self.ahfData.night_lock || self.bt_stage != .function_ok {return}
+        buttonPress.night_mode_press = false
+        if chkMutliKeyPressCnt(buttonPress) > 0 {return}
+        ahfViewModel.execute(action: .release)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func chairAction(_ sender: Any) {
+        buttonPress.chair_mode_press = true
+        if self.ahfData.chair_lock || !self.allKeyRelease(){return}
+        ahfViewModel.execute(action: .chair_mode)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func chairReleaseAction(_ sender: Any) {
+        if self.ahfData.chair_lock || self.bt_stage != .function_ok {return}
+        buttonPress.chair_mode_press = false
+        if chkMutliKeyPressCnt(buttonPress) > 0 {return}
+        ahfViewModel.execute(action: .release)
+        buttonProcess(buttonPress)
+    }
+    @IBAction func btConnectionDown(_ sender: Any) {
+        buttonPress.connection_press = true
+        if !allKeyRelease(true)  {return}
+        ahfSetting.auto_lock_time_cnt = 0
+        if self.bt_state == .unauthorized
+        {
+            allowBtAccessDialog()
+        }else if self.bt_state == .poweredOff
+        {
+            self.view.showToast(text: "Device bluetooth is \nturned off.".localized)
+            self.alert_dialog_dismiss()
+        }else if self.bt_stage == .function_ok || self.bt_stage == .is_connect || self.bt_stage == .notify_ok
+        {
+            manualDisconnectDialog()
+        }else
+        {
+            self.connecting_cnt = 30
+            self.BT_title.text = ""
+            self.controlViewModel.set_bt_stage(data: .init_value)
+            self.controlViewModel.reScanBt()
+            self.reConnectingDialog()
+        }
+    }
+    @IBAction func btConnectionReleaseAction(_ sender: Any) {
+        buttonPress.connection_press = false
+    }
+    @IBAction func settingAction(_ sender: Any) {
+        buttonPress.setting_press = true
+        if !allKeyRelease(true)  {return}
+        goToSettings()
+        buttonProcess(buttonPress)
+    }
+    @IBAction func settingReleaseAction(_ sender: Any) {
+        buttonPress.setting_press = false
+    }
+    func isSameButton()->Bool{
+        var flag = true
+        if buttonPressOrg.back_up_press != buttonPress.back_up_press {buttonPressOrg.back_up_press = buttonPress.back_up_press;flag = false}
+        if buttonPressOrg.back_down_press != buttonPress.back_down_press {buttonPressOrg.back_down_press = buttonPress.back_down_press;flag = false}
+        if buttonPressOrg.leg_up_press != buttonPress.leg_up_press {buttonPressOrg.leg_up_press = buttonPress.leg_up_press;flag = false}
+        if buttonPressOrg.leg_down_press != buttonPress.leg_down_press {buttonPressOrg.leg_down_press = buttonPress.leg_down_press;flag = false}
+        if buttonPressOrg.back_leg_up_press != buttonPress.back_leg_up_press {buttonPressOrg.back_leg_up_press = buttonPress.back_leg_up_press;flag = false}
+        if buttonPressOrg.back_leg_down_press != buttonPress.back_leg_down_press {buttonPressOrg.back_leg_down_press = buttonPress.back_leg_down_press;flag = false}
+        if buttonPressOrg.high_low_up_press != buttonPress.high_low_up_press {buttonPressOrg.high_low_up_press = buttonPress.high_low_up_press;flag = false}
+        if buttonPressOrg.high_low_down_press != buttonPress.high_low_down_press {buttonPressOrg.high_low_down_press = buttonPress.high_low_down_press;flag = false}
+        if buttonPressOrg.trend_up_press != buttonPress.trend_up_press {buttonPressOrg.trend_up_press = buttonPress.trend_up_press;flag = false}
+        if buttonPressOrg.trend_down_press != buttonPress.trend_down_press {buttonPressOrg.trend_down_press = buttonPress.trend_down_press;flag = false}
+        if buttonPressOrg.night_mode_press != buttonPress.night_mode_press {buttonPressOrg.night_mode_press = buttonPress.night_mode_press;flag = false}
+        if buttonPressOrg.light_mode_press != buttonPress.light_mode_press {buttonPressOrg.light_mode_press = buttonPress.light_mode_press;flag = false}
+        if buttonPressOrg.chair_mode_press != buttonPress.chair_mode_press {buttonPressOrg.chair_mode_press = buttonPress.chair_mode_press;flag = false}
+        if buttonPressOrg.setting_press != buttonPress.setting_press {buttonPressOrg.setting_press = buttonPress.setting_press;flag = false}
+        if buttonPressOrg.connection_press != buttonPress.connection_press {buttonPressOrg.connection_press = buttonPress.connection_press;flag = false}
+        return flag
+    }
+    func isSame()->Bool{
+    var flag = true
+    if self.ahfDataOrg.back_lock != self.ahfData.back_lock {ahfDataOrg.back_lock = self.ahfData.back_lock;flag = false}
+    if self.ahfDataOrg.leg_lock != self.ahfData.leg_lock {ahfDataOrg.leg_lock = self.ahfData.leg_lock;flag = false}
+    if self.ahfDataOrg.back_leg_lock != self.ahfData.back_leg_lock {ahfDataOrg.back_leg_lock = self.ahfData.back_leg_lock;flag = false}
+    if self.ahfDataOrg.high_low_lock != self.ahfData.high_low_lock {ahfDataOrg.high_low_lock = self.ahfData.high_low_lock;flag = false}
+    if self.ahfDataOrg.trend_lock != self.ahfData.trend_lock {ahfDataOrg.trend_lock = self.ahfData.trend_lock;flag = false}
+    if self.ahfDataOrg.night_lock != self.ahfData.night_lock {ahfDataOrg.night_lock = self.ahfData.night_lock;flag = false}
+    if self.ahfDataOrg.chair_lock != self.ahfData.chair_lock {ahfDataOrg.chair_lock = self.ahfData.chair_lock;flag = false}
+    if self.ahfDataOrg.light_mode != self.ahfData.light_mode {ahfDataOrg.light_mode = self.ahfData.light_mode;flag = false}
+    if self.bt_stage_org != self.bt_stage {self.bt_stage_org = self.bt_stage;flag = false}
+    return flag
+    }
     func buttonProcess(_ buttonValue:_buttonPress){
+        if isSameButton() {return}
         if self.bt_stage == .function_ok
         {
             if !self.ahfData.back_lock
@@ -258,230 +527,11 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
                 if buttonValue.chair_mode_press {chairBtn.setImage(UIImage(named:"ic_circle_chair_white"), for: .normal)}
                 else {chairBtn.setImage(UIImage(named:"ic_circle_chair"), for: .normal)}
             }
-           /* if ahfSetting.system_haptics
-            {
-                // print("buttonValue.bt_press:\(buttonValue.bt_press)")
-                if buttonValue.back_up_press || buttonValue.back_down_press || buttonValue.leg_up_press || buttonValue.leg_down_press || buttonValue.back_leg_up_press || buttonValue.back_leg_down_press || buttonValue.high_low_up_press || buttonValue.high_low_down_press || buttonValue.trend_up_press || buttonValue.trend_down_press || buttonValue.night_mode_press || buttonValue.light_mode_press || buttonValue.chair_mode_press || buttonValue.setting_press
-                {
-                    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-                    ahfSetting.auto_lock_time_cnt = 0
-                }
-            }*/
+            buttonPressUI = buttonValue
         }
-    }
-    func testDialog(){
-        //let show_text = "\("Connection failed.".localized)\n\(self.last_device) \("not in range.".localized)"
-        //self.view.showToast(text: show_text)
-        //self.view.showToast(text: "Connection failed.".localized)
-        //self.view.showToast(text: "Device bluetooth is \nturned off.".localized)
-        //let show_text = "\(self.last_device) \("connected.".localized)"
-        //self.view.showToast(text: show_text)
-        //let show_text = "\("Connection failed.".localized)\n\(self.last_device) \("not in range.".localized)"
-        //self.view.showToast(text: show_text)
-        //allowBtAccessDialog()
-        //manualDisconnectDialog()
-        //disconnectDialog()
-        //self.last_device = ""
-        //reConnectingDialog()
-    }
-    @IBAction func backUpAction(_ sender: Any) {
-        //print("backUpAction back_up_press:\(buttonPress.back_up_press)")
-        testDialog()
-        if self.ahfData.back_lock || !self.allKeyRelease() {return}
-        ahfViewModel.execute(action: .back_up)
-        buttonPress.back_up_press = true
-        buttonProcess(buttonPress)
-    }
-    @IBAction func backUpReleaseAction(_ sender: Any) {
-        if self.ahfData.back_lock || self.bt_stage != .function_ok {return}
-        ahfViewModel.execute(action: .release)
-        buttonPress.back_up_press = false
-        buttonProcess(buttonPress)
-    }
-    @IBAction func backDownAction(_ sender: Any) {
-        //print("backDownAction back_down_press:\(buttonPress.back_down_press)")
-        if self.ahfData.back_lock || !self.allKeyRelease(){return}
-        ahfViewModel.execute(action: .back_down)
-        buttonPress.back_down_press = true
-        buttonProcess(buttonPress)
-    }
-    @IBAction func backDownReleaseAction(_ sender: Any) {
-        if self.ahfData.back_lock || self.bt_stage != .function_ok {return}
-        ahfViewModel.execute(action: .release)
-        buttonPress.back_down_press = false
-        buttonProcess(buttonPress)
-    }
-    @IBAction func legUpAction(_ sender: Any) {
-        if self.ahfData.leg_lock || !self.allKeyRelease() {return}
-        ahfViewModel.execute(action: .leg_up)
-        buttonPress.leg_up_press = true
-        buttonProcess(buttonPress)
-    }
-    @IBAction func legUpReleaseAction(_ sender: Any) {
-        if self.ahfData.leg_lock || self.bt_stage != .function_ok {return}
-        ahfViewModel.execute(action: .release)
-        buttonPress.leg_up_press = false
-        buttonProcess(buttonPress)
-    }
-    @IBAction func legDownAction(_ sender: Any) {
-        if self.ahfData.leg_lock || !self.allKeyRelease() {return}
-        ahfViewModel.execute(action: .leg_down)
-        buttonPress.leg_down_press = true
-        buttonProcess(buttonPress)
-    }
-    @IBAction func legDownReleaseAction(_ sender: Any) {
-        if self.ahfData.leg_lock || self.bt_stage != .function_ok {return}
-        ahfViewModel.execute(action: .release)
-        buttonPress.leg_down_press = false
-        buttonProcess(buttonPress)
-    }
-    @IBAction func backLegUpAction(_ sender: Any) {
-        if self.ahfData.back_leg_lock || !self.allKeyRelease(){return}
-        ahfViewModel.execute(action: .back_leg_up)
-        buttonPress.back_leg_up_press = true
-        buttonProcess(buttonPress)
-    }
-    @IBAction func backLegUpReleaseAction(_ sender: Any) {
-        if self.ahfData.back_leg_lock {return}
-        ahfViewModel.execute(action: .release)
-        buttonPress.back_leg_up_press = false
-        buttonProcess(buttonPress)
-    }
-    @IBAction func backLegDownAction(_ sender: Any) {
-        if self.ahfData.back_leg_lock || !self.allKeyRelease(){return}
-        ahfViewModel.execute(action: .back_leg_down)
-        buttonPress.back_leg_down_press = true
-        buttonProcess(buttonPress)
-    }
-    @IBAction func backLegDownReleaseAction(_ sender: Any) {
-        if self.ahfData.back_leg_lock || self.bt_stage != .function_ok {return}
-        ahfViewModel.execute(action: .release)
-        buttonPress.back_leg_down_press = false
-        buttonProcess(buttonPress)
-    }
-    @IBAction func hiLowUpAction(_ sender: Any) {
-        if self.ahfData.high_low_lock || !self.allKeyRelease() {return}
-        ahfViewModel.execute(action: .high_low_up)
-        buttonPress.high_low_up_press = true
-        buttonProcess(buttonPress)
-    }
-    @IBAction func hiLowUpReleaseAction(_ sender: Any) {
-        if self.ahfData.high_low_lock || self.bt_stage != .function_ok {return}
-        ahfViewModel.execute(action: .release)
-        buttonPress.high_low_up_press = false
-        buttonProcess(buttonPress)
-    }
-    @IBAction func hiLowDownAction(_ sender: Any) {
-        if self.ahfData.high_low_lock || !self.allKeyRelease() {return}
-        ahfViewModel.execute(action: .high_low_down)
-        buttonPress.high_low_down_press = true
-        buttonProcess(buttonPress)
-    }
-    @IBAction func hiLowDownReleaseAction(_ sender: Any) {
-        if self.ahfData.high_low_lock || self.bt_stage != .function_ok {return}
-        ahfViewModel.execute(action: .release)
-        buttonPress.high_low_down_press = false
-        buttonProcess(buttonPress)
-    }
-    @IBAction func trendUpAction(_ sender: Any) {
-        if self.ahfData.trend_lock || !self.allKeyRelease(){return}
-        ahfViewModel.execute(action: .trend_up)
-        buttonPress.trend_up_press = true
-        buttonProcess(buttonPress)
-    }
-    @IBAction func trendUpReleaseAction(_ sender: Any) {
-        if self.ahfData.trend_lock || self.bt_stage != .function_ok {return}
-        ahfViewModel.execute(action: .release)
-        buttonPress.trend_up_press = false
-        buttonProcess(buttonPress)
-    }
-    @IBAction func trendDownAction(_ sender: Any) {
-        if self.ahfData.trend_lock || !self.allKeyRelease() {return}
-        ahfViewModel.execute(action: .trend_down)
-        buttonPress.trend_down_press = true
-        buttonProcess(buttonPress)
-    }
-    @IBAction func trendDownReleaseAction(_ sender: Any) {
-        if self.ahfData.trend_lock || self.bt_stage != .function_ok {return}
-        ahfViewModel.execute(action: .release)
-        buttonPress.trend_down_press = false
-        buttonProcess(buttonPress)
-    }
-    @IBAction func lightAction(_ sender: Any) {
-        if !allKeyRelease()  {return}
-        ahfViewModel.execute(action: .light_mode)
-        buttonPress.light_mode_press = true
-        buttonProcess(buttonPress)
-        self.btn_timer=Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false) { [self] (ktimer) in
-            print("lightReleaseAction")
-            buttonPress.light_mode_press = false
-            ahfViewModel.execute(action: .release)
-            buttonProcess(buttonPress)
-        }
-    }
-    @IBAction func lightReleaseAction(_ sender: Any) {
-    }
-    @IBAction func nightAction(_ sender: Any) {
-        if self.ahfData.night_lock || !self.allKeyRelease(){return}
-        ahfViewModel.execute(action: .night_mode)
-        buttonPress.night_mode_press = true
-        buttonProcess(buttonPress)
-    }
-    @IBAction func nightReleaseAction(_ sender: Any) {
-        if self.ahfData.night_lock || self.bt_stage != .function_ok {return}
-        ahfViewModel.execute(action: .release)
-        buttonPress.night_mode_press = false
-        buttonProcess(buttonPress)
-    }
-    @IBAction func chairAction(_ sender: Any) {
-        if self.ahfData.chair_lock || !self.allKeyRelease(){return}
-        ahfViewModel.execute(action: .chair_mode)
-        buttonPress.chair_mode_press = true
-        buttonProcess(buttonPress)
-    }
-    @IBAction func chairReleaseAction(_ sender: Any) {
-        if self.ahfData.chair_lock || self.bt_stage != .function_ok {return}
-        ahfViewModel.execute(action: .release)
-        buttonPress.chair_mode_press = false
-        buttonProcess(buttonPress)
-    }
-    @IBAction func btConnectionDown(_ sender: Any) {
-        if !allKeyRelease(true)  {return}
-        buttonPress.connection_press = true
-        ahfSetting.auto_lock_time_cnt = 0
-        if self.bt_state == .unauthorized
-        {
-            allowBtAccessDialog()
-        }else if self.bt_state == .poweredOff
-        {
-            self.view.showToast(text: "Device bluetooth is \nturned off.".localized)
-            self.alert_dialog_dismiss()
-        }else if self.bt_stage == .function_ok || self.bt_stage == .is_connect || self.bt_stage == .notify_ok
-        {
-            manualDisconnectDialog()
-        }else
-        {
-            self.connecting_cnt = 30
-            self.BT_title.text = ""
-            self.controlViewModel.set_bt_stage(data: .init_value)
-            self.controlViewModel.reScanBt()
-            self.reConnectingDialog()
-        }
-    }
-    @IBAction func btConnectionAction(_ sender: Any) {
-        buttonPress.connection_press = false
-    }
-    @IBAction func settingAction(_ sender: Any) {
-        if !allKeyRelease(true)  {return}
-        buttonPress.setting_press = true
-        goToSettings()
-        buttonProcess(buttonPress)
-    }
-    @IBAction func settingReleaseAction(_ sender: Any) {
-        buttonPress.setting_press = false
     }
     func refreshUI(){
-        
+        if isSame() {return}
         if self.bt_stage == .function_ok
         {
             back_lock.isHidden = !self.ahfData.back_lock
@@ -630,10 +680,6 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         tools.scalProcess()
         setObserver()
         self.last_device = self.controlViewModel.get_last_device()
-        if self.last_device.count > 0 // auto_connect
-        {
-            connecting_cnt = 30
-        }
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
@@ -688,6 +734,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
 }
     @objc func appMovedToBackground() {
         print(tag,"App moved to background!:\(self.bt_stage.rawValue)")
+        move_background_flag = true
     }
     @objc func appMovedToForeground() {
         self.bt_state = controlViewModel.get_bt_state()
@@ -697,22 +744,18 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         //print("lang:\(lang)")
         //UserDefaults.standard.set(lang, forKey: "lang") //儲存語系為基本
         print(tag,"App moved to foreground! self.bt_state:\(self.bt_state.rawValue),\(self.bt_stage.rawValue),last_device:\(self.last_device)")
+        background_flag_timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (ktimer) in
+            self.move_background_flag = false
+            print(self.tag,"move_background_flag:\(self.move_background_flag)")
+        }
         if self.bt_state == .unauthorized
         {
             allowBtAccessDialog()
         }else if self.bt_state == .poweredOff
         {
             self.connecting_cnt = 0
-            self.view.showToast(text: "Device bluetooth is \nturned off.".localized)
             self.alert_dialog_dismiss()
-        }else
-        {
-            if self.last_device.count > 0
-            {
-                //    self.bt_stage = .init_value
-                //    controlViewModel.startScan()
-                connecting_cnt = 30
-            }
+            self.view.showToast(text: "Device bluetooth is \nturned off.".localized)
         }
         self.refreshUI()
     }
@@ -803,24 +846,73 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
                 goToLockScreen()
                 ahfSetting.auto_lock_time_cnt = 0
             }
+            if self.chkMutliKeyPressCnt(buttonPressUI) == 1 {ahfSetting.auto_lock_time_cnt = 0}
         }
     }
     override func viewDidAppear(_ animated: Bool) {
     }
     override func viewWillDisappear(_ animated: Bool) {
-        //print("viewWillDisappear")
+        print(self.tag,"viewWillDisappear")
+        allKeyClear()
         //removeObserver()
         //self.timer?.invalidate()
     }
+    func chkMutliKeyPressCnt(_ buttonPress:_buttonPress)->Int{
+        var keyCnt = 0
+        if buttonPress.back_up_press {keyCnt = keyCnt+1}
+        if buttonPress.back_down_press {keyCnt = keyCnt+1}
+        if buttonPress.leg_up_press {keyCnt = keyCnt+1}
+        if buttonPress.leg_down_press {keyCnt = keyCnt+1}
+        if buttonPress.back_leg_up_press {keyCnt = keyCnt+1}
+        if buttonPress.back_leg_down_press {keyCnt = keyCnt+1}
+        if buttonPress.high_low_up_press {keyCnt = keyCnt+1}
+        if buttonPress.high_low_down_press {keyCnt = keyCnt+1}
+        if buttonPress.trend_up_press {keyCnt = keyCnt+1}
+        if buttonPress.trend_down_press {keyCnt = keyCnt+1}
+        if buttonPress.night_mode_press {keyCnt = keyCnt+1}
+        if buttonPress.light_mode_press {keyCnt = keyCnt+1}
+        if buttonPress.chair_mode_press {keyCnt = keyCnt+1}
+        if buttonPress.setting_press {keyCnt = keyCnt+1}
+        if buttonPress.connection_press {keyCnt = keyCnt+1}
+        //dump(buttonPress)
+        return keyCnt
+    }
+    func allKeyClear(){
+        print("allKeyClear")
+        buttonPress.back_up_press = false
+        buttonPress.back_down_press = false
+        buttonPress.leg_up_press = false
+        buttonPress.leg_down_press = false
+        buttonPress.back_leg_up_press = false
+        buttonPress.back_leg_down_press = false
+        buttonPress.high_low_up_press = false
+        buttonPress.high_low_down_press = false
+        buttonPress.trend_up_press = false
+        buttonPress.trend_down_press = false
+        buttonPress.night_mode_press = false
+        buttonPress.light_mode_press = false
+        buttonPress.chair_mode_press = false
+        buttonPress.setting_press = false
+        buttonPress.connection_press = false
+    }
     func allKeyRelease(_ skip_haptics:Bool = false)->Bool{
-        //print(self.tag,"allKeyRelease back_up_press:\(buttonPress.back_up_press),back_down_press:\(buttonPress.back_down_press)")
-        if buttonPress.back_up_press || buttonPress.back_down_press || buttonPress.leg_up_press || buttonPress.leg_down_press || buttonPress.back_leg_up_press || buttonPress.back_leg_down_press || buttonPress.high_low_up_press || buttonPress.high_low_down_press || buttonPress.trend_up_press || buttonPress.trend_down_press || buttonPress.night_mode_press || buttonPress.light_mode_press || buttonPress.chair_mode_press || buttonPress.setting_press// || buttonPress.connection_press
+        if self.bt_stage != .function_ok && !buttonPress.connection_press && !buttonPress.setting_press
         {
-            ahfViewModel.execute(action: .release)
-            print("allKeyRelease : false")
+            allKeyClear()
+            print("allKeyRelease bt_stage:\(self.bt_stage)")
             return false
         }
-        print("skip_haptics : \(skip_haptics)")
+        //print(self.tag,"allKeyRelease back_up_press:\(buttonPress.back_up_press),back_down_press:\(buttonPress.back_down_press)")
+        if chkMutliKeyPressCnt(buttonPress) > 1
+        {
+            ahfViewModel.execute(action: .release)
+            let buttonPressBuf = buttonPress
+            allKeyClear()
+            buttonProcess(buttonPress)
+            buttonPress = buttonPressBuf
+            return false
+        }
+        //print("skip_haptics : \(skip_haptics)")
         if skip_haptics
         {
             ahfSetting.auto_lock_time_cnt = 0
@@ -894,7 +986,6 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
             self.view.showToast(text: "Device bluetooth is \nturned off.".localized)
         }else
         {
-            //self.connecting_alert_dialog()
             self.reConnectingDialog()
             self.connecting_cnt = 30
             self.BT_title.text = ""
@@ -934,7 +1025,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         self.clearConnection()
     }
     func dismissConnectingDialog() {
-        self.alert_dialog_dismiss()
+        self.clearConnection()
         print(self.tag,"dismissConnectingDialog")
     }
     func clearConnection(){

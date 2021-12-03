@@ -579,8 +579,10 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="ic_connect_on_3seconds"/>
                                 <connections>
-                                    <action selector="btConnectionAction:" destination="qx2-kb-heT" eventType="touchUpInside" id="xl2-JV-yj6"/>
                                     <action selector="btConnectionDown:" destination="qx2-kb-heT" eventType="touchDown" id="WD4-me-ner"/>
+                                    <action selector="btConnectionReleaseAction:" destination="qx2-kb-heT" eventType="touchUpOutside" id="81U-rq-syd"/>
+                                    <action selector="btConnectionReleaseAction:" destination="qx2-kb-heT" eventType="touchUpInside" id="FyS-2v-txU"/>
+                                    <action selector="btConnectionReleaseAction:" destination="qx2-kb-heT" eventType="touchCancel" id="iTh-7p-pFq"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTu-v3-1s1">
@@ -668,12 +670,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ifK-UY-3GH">
-                                <rect key="frame" x="62.5" y="208" width="250" height="250"/>
+                                <rect key="frame" x="67.5" y="237" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cVT-if-mRT">
-                                <rect key="frame" x="127.66666666666663" y="273" width="119.99999999999997" height="120"/>
+                                <rect key="frame" x="68" y="237" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="ic_lock_120"/>
@@ -699,7 +701,6 @@ to unlock.</string>
                         <color key="backgroundColor" red="0.72156862745098038" green="0.74117647058823533" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="unlockBk" destination="ifK-UY-3GH" id="A2T-PL-vnp"/>
                         <outlet property="unlockBtn" destination="cVT-if-mRT" id="grf-ZI-BkB"/>
                         <outlet property="unlockCircle" destination="ifK-UY-3GH" id="B7L-Ua-9kB"/>
                         <outlet property="unlockTitle" destination="8yu-LT-NpD" id="e7Q-fc-5pb"/>
