@@ -271,6 +271,7 @@
                                             <action selector="backUpReleaseAction:" destination="qx2-kb-heT" eventType="touchUpOutside" id="VPw-0g-vtr"/>
                                             <action selector="backUpReleaseAction:" destination="qx2-kb-heT" eventType="touchUpInside" id="WZX-aC-hoX"/>
                                             <action selector="backUpReleaseAction:" destination="qx2-kb-heT" eventType="touchCancel" id="ajN-U4-bZs"/>
+                                            <action selector="backUpReleaseAction:" destination="qx2-kb-heT" eventType="touchDragOutside" id="eSG-Ww-f5s"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqJ-qf-nZS">
@@ -283,6 +284,7 @@
                                             <action selector="backDownAction:" destination="qx2-kb-heT" eventType="touchDown" id="JyR-U0-x74"/>
                                             <action selector="backDownReleaseAction:" destination="qx2-kb-heT" eventType="touchUpOutside" id="2RK-b4-PUs"/>
                                             <action selector="backDownReleaseAction:" destination="qx2-kb-heT" eventType="touchUpInside" id="fKe-RZ-4EY"/>
+                                            <action selector="backDownReleaseAction:" destination="qx2-kb-heT" eventType="touchDragOutside" id="gkY-Im-46L"/>
                                             <action selector="backDownReleaseAction:" destination="qx2-kb-heT" eventType="touchCancel" id="uBB-ff-20r"/>
                                         </connections>
                                     </button>
@@ -314,6 +316,7 @@
                                         <connections>
                                             <action selector="backLegUpAction:" destination="qx2-kb-heT" eventType="touchDown" id="Ub9-fQ-Uth"/>
                                             <action selector="backLegUpReleaseAction:" destination="qx2-kb-heT" eventType="touchCancel" id="MV9-Dq-70H"/>
+                                            <action selector="backLegUpReleaseAction:" destination="qx2-kb-heT" eventType="touchDragOutside" id="Og2-SI-mn8"/>
                                             <action selector="backLegUpReleaseAction:" destination="qx2-kb-heT" eventType="touchUpInside" id="Qfa-x6-eUc"/>
                                             <action selector="backLegUpReleaseAction:" destination="qx2-kb-heT" eventType="touchUpOutside" id="VaA-0n-eYC"/>
                                         </connections>
@@ -329,6 +332,7 @@
                                             <action selector="backLegDownReleaseAction:" destination="qx2-kb-heT" eventType="touchUpOutside" id="Qja-Vr-v5E"/>
                                             <action selector="backLegDownReleaseAction:" destination="qx2-kb-heT" eventType="touchCancel" id="kW4-Rz-mmV"/>
                                             <action selector="backLegDownReleaseAction:" destination="qx2-kb-heT" eventType="touchUpInside" id="nGR-fT-WX8"/>
+                                            <action selector="backLegDownReleaseAction:" destination="qx2-kb-heT" eventType="touchDragOutside" id="ukM-bJ-62r"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1C9-Pu-jpL">
@@ -361,6 +365,7 @@
                                             <action selector="legUpReleaseAction:" destination="qx2-kb-heT" eventType="touchUpInside" id="3vp-fR-RKz"/>
                                             <action selector="legUpReleaseAction:" destination="qx2-kb-heT" eventType="touchUpOutside" id="JEv-J6-d77"/>
                                             <action selector="legUpReleaseAction:" destination="qx2-kb-heT" eventType="touchCancel" id="W71-GK-Zo0"/>
+                                            <action selector="legUpReleaseAction:" destination="qx2-kb-heT" eventType="touchDragOutside" id="kOR-OY-9yv"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRN-ma-HmX">
@@ -371,6 +376,7 @@
                                         <state key="normal" image="ic_down_antiwhite"/>
                                         <connections>
                                             <action selector="legDownAction:" destination="qx2-kb-heT" eventType="touchDown" id="Z9R-IY-Ae2"/>
+                                            <action selector="legDownReleaseAction:" destination="qx2-kb-heT" eventType="touchDragOutside" id="4oJ-xC-IQG"/>
                                             <action selector="legDownReleaseAction:" destination="qx2-kb-heT" eventType="touchUpInside" id="I1D-fV-7QI"/>
                                             <action selector="legDownReleaseAction:" destination="qx2-kb-heT" eventType="touchCancel" id="JQN-vw-T4o"/>
                                             <action selector="legDownReleaseAction:" destination="qx2-kb-heT" eventType="touchUpOutside" id="Olp-nz-xaT"/>
@@ -403,6 +409,7 @@
                                         <state key="normal" image="ic_up_antiwhite"/>
                                         <connections>
                                             <action selector="hiLowUpAction:" destination="qx2-kb-heT" eventType="touchDown" id="cpC-zv-1Hm"/>
+                                            <action selector="hiLowUpReleaseAction:" destination="qx2-kb-heT" eventType="touchDragOutside" id="4PG-JQ-lbk"/>
                                             <action selector="hiLowUpReleaseAction:" destination="qx2-kb-heT" eventType="touchUpInside" id="IUa-WK-4I1"/>
                                             <action selector="hiLowUpReleaseAction:" destination="qx2-kb-heT" eventType="touchCancel" id="REQ-n0-x62"/>
                                             <action selector="hiLowUpReleaseAction:" destination="qx2-kb-heT" eventType="touchUpOutside" id="jBU-RH-vQp"/>
@@ -416,6 +423,7 @@
                                         <state key="normal" image="ic_down_antiwhite"/>
                                         <connections>
                                             <action selector="hiLowDownAction:" destination="qx2-kb-heT" eventType="touchDown" id="7Ff-OC-HI4"/>
+                                            <action selector="hiLowDownReleaseAction:" destination="qx2-kb-heT" eventType="touchDragOutside" id="Lpx-B9-L3o"/>
                                             <action selector="hiLowDownReleaseAction:" destination="qx2-kb-heT" eventType="touchCancel" id="XdK-4e-cXE"/>
                                             <action selector="hiLowDownReleaseAction:" destination="qx2-kb-heT" eventType="touchUpOutside" id="ool-Yj-S0q"/>
                                             <action selector="hiLowDownReleaseAction:" destination="qx2-kb-heT" eventType="touchUpInside" id="t2K-r2-lrt"/>
@@ -449,6 +457,7 @@
                                         <connections>
                                             <action selector="trendUpAction:" destination="qx2-kb-heT" eventType="touchDown" id="PVm-3g-hhj"/>
                                             <action selector="trendUpReleaseAction:" destination="qx2-kb-heT" eventType="touchUpOutside" id="CyH-cd-AGd"/>
+                                            <action selector="trendUpReleaseAction:" destination="qx2-kb-heT" eventType="touchDragOutside" id="cKx-Oz-2kN"/>
                                             <action selector="trendUpReleaseAction:" destination="qx2-kb-heT" eventType="touchCancel" id="rqC-xC-z0U"/>
                                             <action selector="trendUpReleaseAction:" destination="qx2-kb-heT" eventType="touchUpInside" id="seu-Zb-WKJ"/>
                                         </connections>
@@ -464,6 +473,7 @@
                                             <action selector="trendDownReleaseAction:" destination="qx2-kb-heT" eventType="touchUpInside" id="80x-mo-oJB"/>
                                             <action selector="trendDownReleaseAction:" destination="qx2-kb-heT" eventType="touchCancel" id="IC7-BW-wt0"/>
                                             <action selector="trendDownReleaseAction:" destination="qx2-kb-heT" eventType="touchUpOutside" id="T7a-gc-dlz"/>
+                                            <action selector="trendDownReleaseAction:" destination="qx2-kb-heT" eventType="touchDragOutside" id="m9g-Fg-eKo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWj-gv-gBu">
@@ -491,6 +501,7 @@
                                     <action selector="nightAction:" destination="qx2-kb-heT" eventType="touchDown" id="mci-8e-j14"/>
                                     <action selector="nightReleaseAction:" destination="qx2-kb-heT" eventType="touchCancel" id="1d9-hW-dnz"/>
                                     <action selector="nightReleaseAction:" destination="qx2-kb-heT" eventType="touchUpInside" id="8Tm-xK-xe4"/>
+                                    <action selector="nightReleaseAction:" destination="qx2-kb-heT" eventType="touchDragOutside" id="brj-Mw-CbP"/>
                                     <action selector="nightReleaseAction:" destination="qx2-kb-heT" eventType="touchUpOutside" id="kDw-eS-GnP"/>
                                 </connections>
                             </button>
@@ -502,6 +513,7 @@
                                 <state key="normal" image="ic_circle_chair_antiwhite"/>
                                 <connections>
                                     <action selector="chairAction:" destination="qx2-kb-heT" eventType="touchDown" id="tuE-MB-4Bo"/>
+                                    <action selector="chairReleaseAction:" destination="qx2-kb-heT" eventType="touchDragOutside" id="6Nr-HY-zVJ"/>
                                     <action selector="chairReleaseAction:" destination="qx2-kb-heT" eventType="touchUpInside" id="E59-9K-zhQ"/>
                                     <action selector="chairReleaseAction:" destination="qx2-kb-heT" eventType="touchCancel" id="ZtG-us-gP2"/>
                                     <action selector="chairReleaseAction:" destination="qx2-kb-heT" eventType="touchUpOutside" id="tEl-fG-Kg4"/>

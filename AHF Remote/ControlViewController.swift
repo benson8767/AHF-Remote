@@ -185,7 +185,6 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
                 }else if (self.bt_stage == .connecting || self.bt_stage == .is_connect)
                 {
                     print(self.tag,"connecting or is_connect")
-                    //self.connecting_alert_dialog()
                     self.reConnectingDialog()
                 }
                 print(self.tag,"bt_stage:\(bt_stage),isDataReady:\(self.ahfData.isDataReady)")
@@ -240,7 +239,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
     @IBAction func backUpReleaseAction(_ sender: Any) {
         if self.ahfData.back_lock || self.bt_stage != .function_ok {return}
         buttonPress.back_up_press = false
-        print("backUpReleaseAction Cnt:\(chkMutliKeyPressCnt(buttonPress)),back_up_press:\(buttonPress.back_up_press)")
+        //print("backUpReleaseAction Cnt:\(chkMutliKeyPressCnt(buttonPress)),back_up_press:\(buttonPress.back_up_press)")
         if chkMutliKeyPressCnt(buttonPress) > 0 {return}
         ahfViewModel.execute(action: .release)
         buttonProcess(buttonPress)
@@ -255,7 +254,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
     @IBAction func backDownReleaseAction(_ sender: Any) {
         if self.ahfData.back_lock || self.bt_stage != .function_ok {return}
         buttonPress.back_down_press = false
-        print("backDownReleaseAction Cnt:\(chkMutliKeyPressCnt(buttonPress)),back_down_press:\(buttonPress.back_down_press)")
+        //print("backDownReleaseAction Cnt:\(chkMutliKeyPressCnt(buttonPress)),back_down_press:\(buttonPress.back_down_press)")
         if chkMutliKeyPressCnt(buttonPress) > 0 {return}
         ahfViewModel.execute(action: .release)
         buttonProcess(buttonPress)
@@ -424,10 +423,8 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
             manualDisconnectDialog()
         }else
         {
-            self.connecting_cnt = 30
             self.BT_title.text = ""
             self.controlViewModel.set_bt_stage(data: .init_value)
-            self.controlViewModel.reScanBt()
             self.reConnectingDialog()
         }
     }
@@ -686,6 +683,9 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
         tuneUI()
         AppUtility.lockOrientation(.portrait)
+       // backUpBtn.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+      //  backUpBtn.addTarget(self, action: #selector(didDragInsideButton), for: .touchDragInside)
+        //backUpBtn.addTarget(self, action: #selector(backUpReleaseAction), for: .touchDragOutside)
         // Do any additional setup after loading the view.
     }
     func tuneUI(){
@@ -776,6 +776,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
             self.auto_lock_proc()
             if self.connecting_cnt > 0
             {
+                print(self.tag,"connecting_cnt:\(self.connecting_cnt)")
                 if self.connecting_cnt == 1
                 {
                     print(self.tag,"connection fail")
@@ -821,7 +822,6 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
                     }else if (self.bt_stage == .connecting || self.bt_stage == .is_connect)
                     {
                         print(self.tag,"connecting or is_connect")
-                        //self.connecting_alert_dialog()
                         self.reConnectingDialog()
                     }
                 }
@@ -835,7 +835,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         print("get_last_device last device :\(last_device)")
     }
     func auto_lock_proc(){
-        //print(self.tag,"auto_lock_time_cnt[\(ahfSetting.auto_lock_time)]:\(ahfSetting.auto_lock_time_cnt),unlock_press_time[\(ahfSetting.unlock_press_time)]:\(ahfSetting.unlock_press_time_cnt),currentVC:\(currentVC)")
+        print(self.tag,"auto_lock_time_cnt[\(ahfSetting.auto_lock_time)]:\(ahfSetting.auto_lock_time_cnt),currentVC:\(currentVC)")
         if currentVC != .LockViewControllerNum && self.bt_stage == .function_ok
         {
             if ahfSetting.auto_lock_time_cnt < ahfSetting.auto_lock_time
@@ -981,18 +981,16 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
     }
     func reConnectAction() {
         print("RE-CONNECT")
+        self.alert_dialog_dismiss()
         if self.bt_state == .poweredOff
         {
             self.view.showToast(text: "Device bluetooth is \nturned off.".localized)
         }else
         {
             self.reConnectingDialog()
-            self.connecting_cnt = 30
             self.BT_title.text = ""
             self.controlViewModel.set_bt_stage(data: .init_value)
-            self.controlViewModel.startScan()
         }
-        self.alert_dialog_dismiss()
     }
     func disconnectAction() {
         print("disconnectAction")
@@ -1003,6 +1001,8 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
     }
     func reConnectingDialog(){
         if currentDialog != .none {print("had a dialog,skip!");return}
+        self.connecting_cnt = 30
+        self.controlViewModel.reScanBt()
         if self.last_device.count > 0 //direct connect
         {
             reConnectingDialogView.reConnectingDialogViewDelegate = self

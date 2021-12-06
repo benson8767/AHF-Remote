@@ -156,3 +156,23 @@ extension String{
         return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
     }
 }
+// One of the overrided UIButton touches event
+extension UIButton {
+    open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //print("Button: touches began - ")
+        super.touchesBegan(touches, with: event)
+        next?.touchesBegan(touches, with: event)
+        if next == nil { print("next was nil!") }
+        //print("Button: touches began - end\n")
+    }
+    open override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
+        //print("touchesMoved")
+        /*if let t = touches.first,backUpBtn.frame.contains(t.location(in:view))
+        {backUpBtn.sendActions(for: .touchDragInside)
+            print("t:\(t.location(in: view)),backUpBtn:\(backUpBtn.frame)")
+        }else{
+            backUpBtn.sendActions(for: .touchDragOutside)
+        }*/
+    }
+}
