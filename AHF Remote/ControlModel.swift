@@ -129,8 +129,8 @@ class ControlModel: NSObject {
     }
     func reScanBt(){
         info.removeAll()
-        auto_connect = false
-        last_device = ""
+        //auto_connect = false
+        //last_device = ""
         peripheralArray.removeAll()
         bleController.startScan()
     }
