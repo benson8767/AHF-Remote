@@ -196,8 +196,8 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
                 }
                 print(self.tag,"callback bt_stage:\(bt_stage),isDataReady:\(self.ahfData.isDataReady)")
             }
-            self.refreshUI()
             }
+            self.refreshUI()
         }
         controlViewModel.bt_state.observe { (bt_state) in
             print(self.tag,"callback bt_state:\(bt_state.rawValue)")
