@@ -8,6 +8,7 @@ target 'AHF Remote' do
   pod 'DynamicBlurView'
   pod 'DeviceKit', '~> 4.0'
   pod 'ActionSheetPicker-3.0'
+  #pod 'ActionSheetPicker-3.0', :git => 'https://github.com/skywinder/ActionSheetPicker-3.0.git', :branch => 'broken_tapDismissAction_fix'
   pod 'KDCircularProgress'
   pod 'Malert'
   # Pods for AHF Remote

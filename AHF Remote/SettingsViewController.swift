@@ -100,7 +100,7 @@ class SettingsViewController: UIViewController {
         //print("unlock_press_action")
         let timeArray:[String] = ["1s","2s","3s","4s","5s","6s"]
         let currentTimeIndex = getCurrentTimeIndex(timeArray:timeArray,time:"\(ahfSetting.unlock_press_time)s")
-        acp = ActionSheetStringPicker(title: "Unlock After Pressing1".localized,
+        acp = ActionSheetStringPicker.init(title: "Unlock After Pressing1".localized,
                                      rows: timeArray,
                                      initialSelection: currentTimeIndex,
                                      doneBlock: { picker, value, index in

@@ -152,15 +152,21 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
             {
                 if self.bt_stage == .disconnected
                 {
-                    self.first_reconnection = false
+                    //self.first_reconnection = false  //try later & reconnecting dialog
+                    self.first_reconnection = true  //reconnecting
                 }
                 print(self.tag,"callback skip check SettingsViewControllerNum. self.bt_stage:\(self.bt_stage),self.connecting_cnt:\(self.connecting_cnt),first_reconnection:\(self.first_reconnection)")
+                
+            }else if currentVC == .LockViewControllerNum
+            {
+                if self.bt_stage == .disconnected { self.first_reconnection = true } //reconnecting
+                print(self.tag,"callback skip check LockViewControllerNum. self.bt_stage:\(self.bt_stage),self.connecting_cnt:\(self.connecting_cnt),first_reconnection:\(self.first_reconnection)")
             }else
             {
             if self.bt_state == .poweredOff
             {
                 self.alert_dialog_dismiss()
-                self.view.showToast(text: "callback Device bluetooth is \nturned off.".localized)
+                self.view.showToast(text: "Device bluetooth is \nturned off.".localized)
             }else
             {
                 if self.bt_stage == .disconnected
@@ -207,7 +213,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
                 self.allowBtAccessDialog()
             }else */if self.bt_state == .poweredOff
             {
-                self.view.showToast(text: "callback Device bluetooth is \nturned off.".localized)
+                self.view.showToast(text: "Device bluetooth is \nturned off.".localized)
                 self.disconnection()
             }
             self.refreshUI()
@@ -759,7 +765,12 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
     @objc func appMovedToBackground() {
         print(tag,"App moved to background!:\(self.bt_stage.rawValue)")
         move_background_flag = true
-        if currentDialog == .connectingDialog || currentDialog == .reConnectingDialog
+        ahfSetting.auto_lock_time_cnt = 0
+        if currentDialog == .reConnectingDialog
+        {
+            self.connecting_cnt = 30
+        }
+        if currentDialog == .connectingDialog
         {
             alert_dialog_dismiss()
         }
@@ -784,6 +795,10 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
             self.connecting_cnt = 0
             self.alert_dialog_dismiss()
             self.view.showToast(text: "Device bluetooth is \nturned off.".localized)
+        }else if currentVC == .SettingsViewControllerNum || currentVC == .LockViewControllerNum
+        {
+            if self.bt_stage == .disconnected { self.first_reconnection = true }
+            print(self.tag,"skip check SettingsViewControllerNum. self.bt_stage:\(self.bt_stage),self.connecting_cnt:\(self.connecting_cnt),first_reconnection:\(self.first_reconnection)")
         }
         self.refreshUI()
     }
@@ -855,11 +870,11 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
                 }
             }else if self.bt_state == .poweredOn && self.last_device.count > 0 && (self.bt_stage == .connecting || self.bt_stage == .is_connect || self.bt_stage == .disconnected)
             {
-                print(self.tag,"connecting or is_connect auto connect to last_device:\(self.last_device),\(self.bt_state)")
+                print(self.tag,"connecting or is_connect auto connect to last_device:\(self.last_device),\(self.bt_state),\(self.first_reconnection)")
                 if self.first_reconnection
                 {
                     self.reConnectingDialog()
-                    self.first_reconnection = false
+                    if currentVC == .ControlViewControllerNum {self.first_reconnection = false}
                 }else
                 {
                     self.disconnectDialog()
@@ -1115,10 +1130,12 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
             break
         case .connectingDialog:
             connectingDialogView.alert?.dismiss(animated: true, completion: {
-                print("connectingDialogView dismiss")})
+                print("connectingDialogView dismiss")
+                self.connecting_cnt = 0})
         case .reConnectingDialog:
             reConnectingDialogView.alert?.dismiss(animated: true, completion: {
-                print("reconnectingDialogView dismiss")})
+                print("reconnectingDialogView dismiss")
+                self.connecting_cnt = 0})
         case .manualDisconnectDialog:
             manualDisconnectDialogView.alert?.dismiss(animated: true, completion: {
                 print("manualDisconnectDialogView dismiss")})
@@ -1159,17 +1176,21 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         self.present(alert, animated: true)
         break
     case .manualDisconnectDialog:
-        manualDisconnectDialogView.manualDisconnectDialogDismissDelegate = self
+        /*manualDisconnectDialogView.manualDisconnectDialogDismissDelegate = self
         let alert = Malert(customView: manualDisconnectDialogView,tapToDismiss: false)
         manualDisconnectDialogView.alert = alert
         manualDisconnectDialogView.devName.text = self.last_device
-        self.present(alert, animated: true)
+        self.present(alert, animated: true)*/
+        ahfSetting.auto_lock_time_cnt = 0
+        currentDialog = .none
         break
     case .disconnectDialog:
-        disconnectDialogView.disconnectDialogDismissDelegate = self
+        /*disconnectDialogView.disconnectDialogDismissDelegate = self
         let alert = Malert(customView: disconnectDialogView,tapToDismiss: false)
         disconnectDialogView.alert = alert
-        self.present(alert, animated: true)
+        self.present(alert, animated: true)*/
+        ahfSetting.auto_lock_time_cnt = 0
+        currentDialog = .none
         break
     case .allowBtAccessDialog:
         allowBtAccessDialogView.allowBtAccessDialogDismissDelegate = self
