@@ -147,7 +147,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         controlViewModel.bt_stage.observe { (bt_stage) in
             self.bt_stage = bt_stage
             print(self.tag,"callback currentVC:\(currentVC),self.bt_stage:\(self.bt_stage)")
-            if self.move_background_flag {print(self.tag,"callback bt_stage return");return}
+            if self.move_background_flag {print(self.tag,"callback move_background_flag return");return}
             if currentVC == .SettingsViewControllerNum
             {
                 if self.bt_stage == .disconnected
@@ -774,6 +774,13 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         {
             alert_dialog_dismiss()
         }
+        if currentDialog == .disconnectDialog //|| currentDialog == .reConnectingDialog
+        {
+            alert_dialog_dismiss()
+            self.connecting_cnt = 0
+            self.first_reconnection = true
+            print(tag,"alert_dialog_dismiss currentDialog:\(currentDialog)")
+        }
     }
     @objc func appMovedToForeground() {
         self.bt_state = controlViewModel.get_bt_state()
@@ -782,11 +789,11 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         //let lang  = String(array.first!)
         //print("lang:\(lang)")
         //UserDefaults.standard.set(lang, forKey: "lang") //儲存語系為基本
-        print(tag,"App moved to foreground! self.bt_state:\(self.bt_state.rawValue),\(self.bt_stage.rawValue),last_device:\(self.last_device)")
-        background_flag_timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (ktimer) in
+        print(tag,"App moved to foreground! self.bt_state:\(self.bt_state.rawValue),\(self.bt_stage.rawValue),last_device:\(self.last_device),currentDialog:\(currentDialog)")
+        /*background_flag_timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (ktimer) in
             self.move_background_flag = false
             print(self.tag,"move_background_flag:\(self.move_background_flag)")
-        }
+        }*/
         if self.bt_state == .unauthorized
         {
             allowBtAccessDialog()
@@ -795,12 +802,13 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
             self.connecting_cnt = 0
             self.alert_dialog_dismiss()
             self.view.showToast(text: "Device bluetooth is \nturned off.".localized)
-        }else if currentVC == .SettingsViewControllerNum || currentVC == .LockViewControllerNum
+        }else// if currentVC == .SettingsViewControllerNum || currentVC == .LockViewControllerNum
         {
             if self.bt_stage == .disconnected { self.first_reconnection = true }
-            print(self.tag,"skip check SettingsViewControllerNum. self.bt_stage:\(self.bt_stage),self.connecting_cnt:\(self.connecting_cnt),first_reconnection:\(self.first_reconnection)")
+            print(self.tag," self.bt_stage:\(self.bt_stage),self.connecting_cnt:\(self.connecting_cnt),first_reconnection:\(self.first_reconnection)")
         }
         self.refreshUI()
+        self.move_background_flag = false
     }
     override func viewWillAppear(_ animated: Bool) {
         print(self.tag,"viewWillAppear")
@@ -810,7 +818,10 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         self.timer?.invalidate()
         self.timer=Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (ktimer) in   //print(self.tag,"self.bt_stage:\(self.bt_stage),self.bt_state:\(self.bt_state.rawValue),connecting_cnt:\(self.connecting_cnt)")
             //print(self.tag,"currentVC:\(currentVC),self.bt_stage:\(self.bt_stage),self.connecting_cnt:\(self.connecting_cnt)")
-            if currentVC == .SettingsViewControllerNum
+            if self.move_background_flag
+            {
+                print(self.tag,"move_background_flag = true ,skip timer...")
+            }else if currentVC == .SettingsViewControllerNum
             {
                 //print(self.tag,"skip check SettingsViewControllerNum")
                 if self.bt_stage == .notify_ok { self.bt_stage = .function_ok }
@@ -819,7 +830,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
             self.auto_lock_proc()
             if self.connecting_cnt > 0
             {
-                print(self.tag,"connecting_cnt:\(self.connecting_cnt)")
+                print(self.tag,"connecting_cnt:\(self.connecting_cnt),currentDialog:\(self.currentDialog)")
                 if self.connecting_cnt == 1
                 {
                     print(self.tag,"connection fail")
@@ -870,7 +881,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
                 }
             }else if self.bt_state == .poweredOn && self.last_device.count > 0 && (self.bt_stage == .connecting || self.bt_stage == .is_connect || self.bt_stage == .disconnected)
             {
-                print(self.tag,"connecting or is_connect auto connect to last_device:\(self.last_device),\(self.bt_state),\(self.first_reconnection)")
+                print(self.tag,"connecting or is_connect auto connect to last_device:\(self.last_device),\(self.bt_state),\(self.first_reconnection),currentDialog:\(self.currentDialog)")
                 if self.first_reconnection
                 {
                     self.reConnectingDialog()
@@ -885,7 +896,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         print("get_last_device last device :\(last_device)")
     }
     func auto_lock_proc(){
-        print(self.tag,"auto_lock_time_cnt[\(ahfSetting.auto_lock_time)]:\(ahfSetting.auto_lock_time_cnt),last_device:\(last_device),self.bt_stage:\(self.bt_stage),\(self.bt_state.rawValue),currentVC:\(currentVC)")
+        print(self.tag,"auto_lock_time_cnt[\(ahfSetting.auto_lock_time)]:\(ahfSetting.auto_lock_time_cnt),last_device:\(last_device),self.bt_stage:\(self.bt_stage),\(self.bt_state.rawValue),currentVC:\(currentVC),currentDialog:\(currentDialog)")
         if currentVC != .LockViewControllerNum && self.bt_stage == .function_ok
         {
             if ahfSetting.auto_lock_time_cnt < ahfSetting.auto_lock_time
@@ -904,8 +915,6 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
     override func viewWillDisappear(_ animated: Bool) {
         print(self.tag,"viewWillDisappear")
         allKeyClear()
-        buttonPressOrg = allKeyCopy(buttonSourceData: buttonPress)
-        buttonPressUI = allKeyCopy(buttonSourceData: buttonPress)
         //removeObserver()
         //self.timer?.invalidate()
     }
@@ -928,6 +937,24 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         if buttonPress.connection_press {keyCnt = keyCnt+1}
         return keyCnt
     }
+    func currentKeyClear(){
+        print("currentKeyClear")
+        buttonPress.back_up_press = false
+        buttonPress.back_down_press = false
+        buttonPress.leg_up_press = false
+        buttonPress.leg_down_press = false
+        buttonPress.back_leg_up_press = false
+        buttonPress.back_leg_down_press = false
+        buttonPress.high_low_up_press = false
+        buttonPress.high_low_down_press = false
+        buttonPress.trend_up_press = false
+        buttonPress.trend_down_press = false
+        buttonPress.night_mode_press = false
+        buttonPress.light_mode_press = false
+        buttonPress.chair_mode_press = false
+        buttonPress.setting_press = false
+        buttonPress.connection_press = false
+    }
     func allKeyClear(){
         print("allKeyClear")
         buttonPress.back_up_press = false
@@ -945,6 +972,8 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         buttonPress.chair_mode_press = false
         buttonPress.setting_press = false
         buttonPress.connection_press = false
+        buttonPressOrg = allKeyCopy(buttonSourceData: buttonPress)
+        buttonPressUI = allKeyCopy(buttonSourceData: buttonPress)
     }
     func allKeyCopy(buttonSourceData:_buttonPress)->_buttonPress{
         var buttonTargetData = _buttonPress()
@@ -968,7 +997,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
     func allKeyRelease(_ skip_haptics:Bool = false)->Bool{
         if self.bt_stage != .function_ok && !buttonPress.connection_press && !buttonPress.setting_press
         {
-            allKeyClear()
+            currentKeyClear()
             print("allKeyRelease bt_stage:\(self.bt_stage)")
             return false
         }
@@ -977,7 +1006,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         {
             ahfViewModel.execute(action: .release)
             let buttonPressBuf = buttonPress
-            allKeyClear()
+            currentKeyClear()
             buttonProcess(buttonPress)
             buttonPress = buttonPressBuf
             return false
@@ -1040,7 +1069,18 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
     }
     func disconnectDialog(){
         if currentVC != .ControlViewControllerNum {print("currentVC is not control,skip dialog!");return}
-        if currentDialog != .none {print("had a dialog,skip!");return}
+        if currentDialog != .none {
+            if currentDialog == .manualDisconnectDialog
+            {
+                print("had manualDisconnectDialog ,dismiss!");
+                alert_dialog_dismiss()
+            }else
+            {
+                print("had a dialog,skip!");
+            }
+            return}
+        currentKeyClear()
+        ahfViewModel.execute(action: .release)
         currentDialog = .disconnectDialog
         print("disconnectDialog")
         disconnectDialogView.disconnectDialogDismissDelegate = self
@@ -1131,10 +1171,12 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         case .connectingDialog:
             connectingDialogView.alert?.dismiss(animated: true, completion: {
                 print("connectingDialogView dismiss")
+                self.allKeyClear()
                 self.connecting_cnt = 0})
         case .reConnectingDialog:
             reConnectingDialogView.alert?.dismiss(animated: true, completion: {
                 print("reconnectingDialogView dismiss")
+                self.allKeyClear()
                 self.connecting_cnt = 0})
         case .manualDisconnectDialog:
             manualDisconnectDialogView.alert?.dismiss(animated: true, completion: {
