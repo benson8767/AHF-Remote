@@ -147,7 +147,11 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         controlViewModel.bt_stage.observe { (bt_stage) in
             self.bt_stage = bt_stage
             print(self.tag,"callback currentVC:\(currentVC),self.bt_stage:\(self.bt_stage)")
-            if self.move_background_flag {print(self.tag,"callback move_background_flag return");return}
+            if self.move_background_flag {
+                print(self.tag,"callback move_background_flag return");
+                if self.bt_stage == .disconnected { self.first_reconnection = true } //reconnecting
+                self.move_background_flag = false
+                return}
             if currentVC == .SettingsViewControllerNum
             {
                 if self.bt_stage == .disconnected
@@ -763,7 +767,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
     }
 }
     @objc func appMovedToBackground() {
-        print(tag,"App moved to background!:\(self.bt_stage.rawValue)")
+        print(tag,"App moved to background!:\(self.bt_stage.rawValue),bleInitFlag:\(bleInitFlag)")
         move_background_flag = true
         ahfSetting.auto_lock_time_cnt = 0
         if currentDialog == .reConnectingDialog
@@ -789,14 +793,20 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
         //let lang  = String(array.first!)
         //print("lang:\(lang)")
         //UserDefaults.standard.set(lang, forKey: "lang") //儲存語系為基本
-        print(tag,"App moved to foreground! self.bt_state:\(self.bt_state.rawValue),\(self.bt_stage.rawValue),last_device:\(self.last_device),currentDialog:\(currentDialog)")
-        /*background_flag_timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (ktimer) in
+        print(tag,"App moved to foreground! self.bt_state:\(self.bt_state.rawValue),\(self.bt_stage.rawValue),last_device:\(self.last_device),currentDialog:\(currentDialog),bleInitFlag:\(bleInitFlag)")
+        background_flag_timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (ktimer) in
             self.move_background_flag = false
             print(self.tag,"move_background_flag:\(self.move_background_flag)")
-        }*/
+        }
         if self.bt_state == .unauthorized
         {
-            allowBtAccessDialog()
+            if bleInitFlag
+            {
+                print(self.tag,"skip unauthorized bleInitFlag:\(bleInitFlag)")
+            }else
+            {
+             allowBtAccessDialog()
+            }
         }else if self.bt_state == .poweredOff
         {
             self.connecting_cnt = 0
@@ -807,8 +817,8 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
             if self.bt_stage == .disconnected { self.first_reconnection = true }
             print(self.tag," self.bt_stage:\(self.bt_stage),self.connecting_cnt:\(self.connecting_cnt),first_reconnection:\(self.first_reconnection)")
         }
+        bleInitFlag = false
         self.refreshUI()
-        self.move_background_flag = false
     }
     override func viewWillAppear(_ animated: Bool) {
         print(self.tag,"viewWillAppear")

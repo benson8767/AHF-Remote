@@ -29,7 +29,7 @@ protocol BleDeviceRecognize {
     func dataReceived(_ data: Data)
     func postLog(_ data: Data)
 }
-
+var bleInitFlag = false
 class BleController : NSObject, CBCentralManagerDelegate, CBPeripheralDelegate{
     
     private let tag = "BleController"
@@ -53,7 +53,9 @@ class BleController : NSObject, CBCentralManagerDelegate, CBPeripheralDelegate{
     
     private override init() {
         super.init()
+        print(tag,"override init..")
         centralManager = CBCentralManager.init(delegate: self, queue: .main)
+        bleInitFlag = true
     }
     deinit {
         stopSecondTimer()
@@ -62,6 +64,7 @@ class BleController : NSObject, CBCentralManagerDelegate, CBPeripheralDelegate{
     {
         print(tag,"set_bt_init..")
         centralManager = CBCentralManager.init(delegate: self, queue: .main)
+        bleInitFlag = true
     }
     func set_bt_stage(data:BtStage)
     {
