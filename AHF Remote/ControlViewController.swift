@@ -150,7 +150,7 @@ class ControlViewController: UIViewController,ConnectingDialogViewDelegate,ReCon
             if self.move_background_flag {
                 print(self.tag,"callback move_background_flag return");
                 if self.bt_stage == .disconnected { self.first_reconnection = true } //reconnecting
-                self.move_background_flag = false
+                //self.move_background_flag = false
                 return}
             if currentVC == .SettingsViewControllerNum
             {
